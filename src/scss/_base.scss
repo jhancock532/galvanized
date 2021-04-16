@@ -4,6 +4,7 @@
 
 html, body { 
   margin: 0; 
+  background-color: #eee;
 }
 
 canvas { 
@@ -23,3 +24,9 @@ p, li, h1, h2, h3, h4, h5 {
   background: $color--black;
 }
 
+.center {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

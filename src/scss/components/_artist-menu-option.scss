@@ -1,0 +1,20 @@
+.artist-menu-option {
+  background-color: white;
+  border: 2px solid #ddd;
+  width: max-content;
+  padding: 4px;
+  cursor: pointer;
+  user-select: none;
+  margin-top: 5px;
+
+  &:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid #ddd;
+  }
+  
+  &__text {
+    line-height: 0;
+    margin: 10px 2px;
+  }
+}
