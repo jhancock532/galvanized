@@ -1,0 +1,25 @@
+:root {
+  --rainbowHue: 120;
+}
+
+html, body { 
+  margin: 0; 
+}
+
+canvas { 
+  display: block; 
+}
+
+p, li, h1, h2, h3, h4, h5 {
+  font-family: $font-primary;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+::selection {
+  color: $color--white;
+  background: $color--black;
+}
+
