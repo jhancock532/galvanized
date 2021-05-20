@@ -1,0 +1,19 @@
+.Jodie-Hartland {
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__title {
+    background-color: green;
+    color: white;
+    padding: 4px;
+    transform: translate(80px,+140px);
+    width: max-content;
+
+    &--active {
+      transform: translate(0, 0);
+    }
+  }
+}
