@@ -19,7 +19,15 @@ class ArtistsMenu extends React.Component {
   render() {
     //This creates all the artist options in the menu
     const artistMenuOptions = this.props.artistDetails.map((artist) => 
-      <ArtistMenuOption key={artist.name} name={artist.name} setActiveArtist={this.props.setActiveArtist} isMenuOpen={this.state.isMenuOpen}/>
+      <ArtistMenuOption 
+        key={artist.name} 
+        name={artist.name} 
+        setActiveArtist={this.props.setActiveArtist} 
+        isMenuOpen={this.state.isMenuOpen}
+        setHoveredArtist={this.props.setHoveredArtist}
+        resetHoveredArtist={this.props.resetHoveredArtist}
+        hoveredArtist={this.props.hoveredArtist}
+      />
     );
 
     return (

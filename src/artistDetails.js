@@ -4,7 +4,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "",
     contact: "email",
   },
   { 
@@ -12,7 +12,7 @@ const ARTIST_DETAILS = [
     title: "DISCONTENT",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/james/fingerprint.png",
     contact: "email", 
   },
   { 

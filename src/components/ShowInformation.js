@@ -5,7 +5,7 @@ class ShowInformation extends React.Component {
     return (
       <div className="show-information">
         <div className="show-information__title">
-          <h1>GALVANIZE</h1>
+          <h1>GALVANIZED</h1>
         </div>
         <div className="show-information__description">
           <p>Digital Media Arts 2021</p>
