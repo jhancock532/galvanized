@@ -1,19 +1,15 @@
 .Jodie-Hartland {
-  position: absolute;
-  display: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 
-  &__title {
-    background-color: green;
-    color: white;
-    padding: 4px;
-    transform: translate(80px,+140px);
-    width: max-content;
+  &__collage-photo {
+    top: calc(50%);
+    left: calc(50%);
+    transform: translate(-50%, -50%) translate(100px, 50px);
+    z-index: 2;
 
-    &--active {
-      transform: translate(0, 0);
+    > .collage-photo__image {
+      clip-path: polygon(0% 100%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%);
     }
+    
   }
+
 }

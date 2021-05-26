@@ -9,11 +9,17 @@ class CollagePhoto extends React.Component {
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
 
-    if (this.props.hoveredArtist === this.props.name) {
-      this.hoverClass = "collage-photo--hovered";
-    } else {
-      this.hoverClass = "collage-photo";
-    }
+    this.hoverDisplayStyles = {
+      opacity: 1,
+      pointerEvents: "all",
+      transition: `opacity 0.5s ease`
+    };
+
+    this.hoverHideStyles = {
+      opacity: 0,
+      pointerEvents: "none",
+      transition: `opacity 0.5s ease`
+    };
 
     this.artistName = this.props.name.replace(" ", "-");
 
@@ -35,22 +41,42 @@ class CollagePhoto extends React.Component {
 
   render(){
 
-    let classNames = this.artistName + "__collage-photo ";
-    if (this.props.name === this.props.hoveredArtist) {
-      classNames += "collage-photo--hovered";
-    } else {
-      classNames += "collage-photo";
-    } 
+    const collagePhotoClassNames = "collage-photo " + this.artistName + "__collage-photo";
 
+    let photoHoverStyling;
+    if (this.props.name === this.props.hoveredArtist) {
+      photoHoverStyling = this.hoverDisplayStyles;
+    } else {
+      photoHoverStyling = this.hoverHideStyles;
+    }
+
+    let selectionHoverStyling;
+    if (this.props.name === this.props.hoveredArtist) {
+      selectionHoverStyling = { zIndex: 100 }
+    }
 
     return (
       <div 
-        className={classNames}  
-        onClick={this.handleClick}
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
+        className={collagePhotoClassNames}  
+        style={selectionHoverStyling}
       >
-        <img className={"collage-photo__image"} alt="" src={this.props.photo} />
+        <img 
+          className={"collage-photo__image"} 
+          alt="" 
+          src={this.props.photo} 
+          onClick={this.handleClick}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        />
+        <img 
+          style={photoHoverStyling} 
+          className={"collage-photo__hover-image"}
+          alt=""
+          src={this.props.photo}
+          onClick={this.handleClick}
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}
+        />
       </div>
     );
   }
