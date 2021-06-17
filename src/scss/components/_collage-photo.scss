@@ -4,7 +4,7 @@
   &__image {
     width: 300px;
     z-index: 1;
-    filter: hue-rotate(90deg);
+    filter: hue-rotate(90deg) brightness(1.25);
   }
 
   &__hover-image {
@@ -12,7 +12,7 @@
     position: absolute;
     z-index: 2;
     left: 0;
-    bottom: 4px; //No idea why???
+    bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
     width: 300px;
   }
 

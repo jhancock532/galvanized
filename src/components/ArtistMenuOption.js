@@ -14,13 +14,15 @@ class ArtistMenuOption extends React.Component {
     this.menuOpenStyles = {
       opacity: 1,
       transform: `translateX(${Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
-      transition: `transform ${0.6 + Math.random() * 0.2}s cubic-bezier(0.435, 0.040, 0.285, 0.995), opacity 0.5s ease`
+      transition: `transform ${0.6 + Math.random() * 0.2}s cubic-bezier(0.435, 0.040, 0.285, 0.995), opacity 0.5s ease`,
+      pointerEvents: `all`
     };
 
     this.menuClosedStyles = {
       opacity: 0,
       transform: `translateX(${-10 - Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
-      transition: `transform 0.5s ease, opacity 0.5s ease`
+      transition: `transform 0.5s ease, opacity 0.5s ease`,
+      pointerEvents: `none`
     };
   }
 

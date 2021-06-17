@@ -32,7 +32,7 @@ class ArtistsMenu extends React.Component {
 
     return (
       <div className="artists-menu">
-        <div className="artists-menu__button" onClick={this.handleClick}> 
+        <div className="button" onClick={this.handleClick}> 
           {this.state.isMenuOpen ? 'Hide Artists' : 'Show Artists'} 
         </div>
 

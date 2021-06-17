@@ -1,0 +1,104 @@
+.sketchpad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: grid;
+  gap: $grid * 1;
+  padding: $grid * 2;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: min-content max-content min-content;
+
+  &__canvas {
+    grid-column: 2 / 4;
+    grid-row: 1 / 4;
+    align-self: center;
+    justify-self: start;
+  }
+
+  &__submission-form {
+    display: none;
+  }
+
+  &__brush-slider {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: white;
+    border-radius: $grid / 2;
+    padding: $grid / 2;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    &__label {
+      font-size: $font-primary;
+      user-select: none;
+      position: relative;
+      text-align: left;
+      z-index: 2;
+      @include font-size(m);
+      mix-blend-mode: difference;
+      color: white;
+    }
+
+    &__preview {
+      position: absolute;
+      z-index: 1;
+      right: 15%;
+      top: 38%;
+      transform: translate(50%, -50%);
+      border-radius: 50%;
+    }
+
+    input {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+   
+  }
+
+  &__color-picker {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &__feedback-target-dropdown {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    background-color: white;
+    font-family: $font-primary;
+    padding: $grid / 2;
+    text-align: center;
+    border-radius: $grid / 2;
+    @include font-size(m);
+
+    select {
+      @include font-size(m);
+      font-family: $font-primary;
+      text-align: center;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__submit-button {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    align-self: end;
+  }
+
+  &__cancel-button {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    width: initial !important;
+    align-self: flex-start;
+  }
+
+}

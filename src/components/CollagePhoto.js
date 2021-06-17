@@ -37,8 +37,6 @@ class CollagePhoto extends React.Component {
     this.props.setActiveArtist(this.props.name);
   }
 
-  //<h1>{(this.props.name === this.props.hoveredArtist) ? "collage-photo--hovered" : "collage-photo"}</h1>
-
   render(){
 
     const collagePhotoClassNames = "collage-photo " + this.artistName + "__collage-photo";

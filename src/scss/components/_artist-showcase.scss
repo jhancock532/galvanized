@@ -1,0 +1,23 @@
+.artist-showcase {
+  &__container {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: rgba(255,255,255,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__exit-button {
+    position: absolute;
+    z-index: 11;
+    top: $grid;
+    right: $grid;
+    
+  }
+}

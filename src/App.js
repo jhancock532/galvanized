@@ -1,15 +1,17 @@
 import React from 'react';
 import ArtistsMenu from './components/ArtistsMenu';
 import ShowInformation from './components/ShowInformation';
+import Guestbook from './components/GuestBook';
 //import ArtistOverview from './components/ArtistOverview';
 import Collage from './components/Collage';
 import './scss/main.scss';
 import ARTIST_DETAILS from './artistDetails';
+import ArtistShowcase from './components/ArtistShowcase';
 
 //import logo from './logo.svg';
 //<img src={logo} className="App-logo" alt="logo" />
 
-
+//<h1 className="center">{this.state.artistSelected}</h1>
 //<ArtistOverview artistDetails={ARTIST_DETAILS} setActiveArtist={this.setActiveArtist}/>
         
 
@@ -19,19 +21,27 @@ class App extends React.Component {
 
     this.state = {
       isArtistSelected: false, 
-      artistSelected: "No Artist Selected",
+      artistSelected: null,
       hoveredArtist: null,
     };
 
     this.setActiveArtist = this.setActiveArtist.bind(this);
     this.setHoveredArtist = this.setHoveredArtist.bind(this);
     this.resetHoveredArtist = this.resetHoveredArtist.bind(this);
+    this.removeActiveArtist = this.removeActiveArtist.bind(this);
   }
 
   setActiveArtist(artist) {
     this.setState({
       isArtistSelected: true,
       artistSelected: artist
+    })
+  }
+
+  removeActiveArtist() {
+    this.setState({
+      isArtistSelected: false,
+      artistSelected: null
     })
   }
 
@@ -68,8 +78,11 @@ class App extends React.Component {
         />
 
         <ShowInformation />
-        
-        <h1 className="center">{this.state.artistSelected}</h1>
+        <ArtistShowcase 
+          artistSelected={this.state.artistSelected} 
+          removeActiveArtist={this.removeActiveArtist}
+        />
+        <Guestbook artistSelected={this.state.artistSelected} />
         
       </div>
     );
