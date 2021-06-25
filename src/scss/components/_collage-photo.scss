@@ -2,7 +2,8 @@
   position: absolute;
 
   &__image {
-    width: 300px;
+    width: 50vmin;
+    user-select: none;
     z-index: 1;
     filter: hue-rotate(90deg) brightness(1.25);
   }
@@ -13,7 +14,7 @@
     z-index: 2;
     left: 0;
     bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
-    width: 300px;
+    width: 50vmin;
   }
 
 }

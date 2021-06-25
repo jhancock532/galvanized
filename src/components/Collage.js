@@ -17,6 +17,7 @@ class Collage extends React.Component {
         setHoveredArtist={this.props.setHoveredArtist}
         resetHoveredArtist={this.props.resetHoveredArtist}
         hoveredArtist={this.props.hoveredArtist}
+        artistSelected={this.props.artistSelected}
       />
     );
 

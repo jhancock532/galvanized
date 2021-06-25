@@ -40,37 +40,34 @@ class Sketchpad extends React.Component {
   }
 
   submitSketch(){
-
-    console.log("Starting!");
     const ctx = document.getElementById("sketchpad-canvas").getContext("2d")
-    //document.getElementById("image_data").value = ctx.canvas.toDataURL();
-
-    //TODO - Refactor select element to use react state.
-    //document.getElementById("respond_to").value = document.getElementById("sketchpad-response-selector").value;
-
     const xhr = new XMLHttpRequest();
+
+    const name = prompt("Please enter your name. (Optional)");
+
+    if (name === null) {
+      return;
+    }
+
     xhr.open("POST", "http://135.125.205.105/mashow/save_doodle.php", true);
-    xhr.setRequestHeader('Content-Type', '"application/x-www-form-urlencoded"');
-    xhr.withCredentials = true;
-
+    xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
-      if (this.readyState !== 4) return;
-
-      console.log(this.status);
+      if (this.readyState !== 4) {
+        return;
+      }
   
       if (this.status === 200) {
-          var data = JSON.parse(this.responseText);
-          console.log(data);
-          // we get the returned data
+        alert("Submitted successfully!");
       }
-      // end of state change: it can be after some time (async)
     };
 
-    xhr.send(JSON.stringify({
-      image_data: ctx.canvas.toDataURL(),
-      respond_to: document.getElementById("sketchpad-response-selector").value,
-      name: "James XML Request Test"
-    }));
+    const POST_DATA = [
+      "image_data=" + ctx.canvas.toDataURL(),
+      "respond_to=" + document.getElementById("sketchpad-response-selector").value,
+      "name=" + name
+    ].join("&");
+
+    xhr.send(POST_DATA);
 
     this.props.closeSketchpad();
   }
@@ -78,7 +75,7 @@ class Sketchpad extends React.Component {
   render() {
 
     const artistOptions = ARTIST_DETAILS.map((artist) => 
-      <option key={artist.name} >
+      <option key={artist.name} selected={(this.props.artistSelected === artist.name)}>
         {artist.name}
       </option>
     );

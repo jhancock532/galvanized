@@ -1,0 +1,24 @@
+.silhouette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  &__image {
+    width: 100vh;
+    filter: contrast(0) brightness(1.85);
+
+    svg {
+      path {
+        fill: #eee !important;
+      }
+    }
+  }
+}

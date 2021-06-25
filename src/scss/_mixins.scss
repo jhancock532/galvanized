@@ -5,7 +5,7 @@
  * Source - https://glennmccomb.com/articles/useful-sass-scss-media-query-mixins-for-bootstrap/
  */
 
- @mixin media-query($breakpoint) {
+@mixin media-query($breakpoint) {
 
   @if map-has-key($media-query-breakpoints, $breakpoint) {
     $breakpoint-value: map-get($media-query-breakpoints, $breakpoint);
@@ -16,7 +16,18 @@
   } @else {
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
+
 }
+
+//A cheat mixin.
+@mixin greater-than($width) {
+
+  @media (min-width: $width) {
+    @content;
+  }
+  
+}
+
 
 /** Responsive Font Size Mixin
  * Accepts the values xxs, xs, s, m, l, xl, xxl, xxxl (see variables.scss)

@@ -3,12 +3,12 @@
   &__collage-photo {
     top: calc(50%);
     left: calc(50%);
-    transform: translate(-50%, -50%) translate(100px, 50px);
+    transform: translate(-50%, -50%) translate(20vmin, 10vmin);
     z-index: 2;
 
-    > .collage-photo__image {
-      clip-path: polygon(0% 100%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%);
-    }
+    //> .collage-photo__image {
+      //clip-path: polygon(0% 100%, 0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 100%);
+    //}
     
   }
 

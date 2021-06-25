@@ -2,4 +2,7 @@
   position: absolute;
   top: $grid;
   left: $grid;
+  position: relative;
+  z-index: 10;
+  width: 0px;
 }

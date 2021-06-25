@@ -7,9 +7,9 @@ import Collage from './components/Collage';
 import './scss/main.scss';
 import ARTIST_DETAILS from './artistDetails';
 import ArtistShowcase from './components/ArtistShowcase';
+import Silhouette from './components/Silhouette';
 
-//import logo from './logo.svg';
-//<img src={logo} className="App-logo" alt="logo" />
+//
 
 //<h1 className="center">{this.state.artistSelected}</h1>
 //<ArtistOverview artistDetails={ARTIST_DETAILS} setActiveArtist={this.setActiveArtist}/>
@@ -36,6 +36,7 @@ class App extends React.Component {
       isArtistSelected: true,
       artistSelected: artist
     })
+    this.resetHoveredArtist();
   }
 
   removeActiveArtist() {
@@ -75,6 +76,7 @@ class App extends React.Component {
           setHoveredArtist={this.setHoveredArtist}
           resetHoveredArtist={this.resetHoveredArtist}
           hoveredArtist={this.state.hoveredArtist}
+          artistSelected={this.state.artistSelected}
         />
 
         <ShowInformation />
@@ -83,7 +85,7 @@ class App extends React.Component {
           removeActiveArtist={this.removeActiveArtist}
         />
         <Guestbook artistSelected={this.state.artistSelected} />
-        
+        <Silhouette />
       </div>
     );
   }

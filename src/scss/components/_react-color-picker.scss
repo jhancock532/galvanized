@@ -6,4 +6,16 @@
 
 .rcp {
   height: max-content !important;
+
+  @media (min-width: 680px) {
+    justify-self: right;
+    grid-column: 1 / 2;
+    grid-row: 3 / 6;
+  }
+
+  @media (min-width: 1090px) {
+    justify-self: center;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
 }

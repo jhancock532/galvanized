@@ -34,4 +34,16 @@
     border: 2px solid black;
     border-bottom: none;
   }
+
+  &__view-submissions-button {
+    width: 15ch;
+  }
+
+  &__sketchpad-button {
+    display: none;
+
+    @include media-query(md) {
+      display: block;
+    }
+  }
 }

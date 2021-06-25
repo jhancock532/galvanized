@@ -32,7 +32,7 @@ const ARTIST_DETAILS = [
     contact: "email", 
   },
   { 
-    name:"Tiarnan McCarthy",
+    name:"Tim McCarthy",
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
@@ -106,13 +106,12 @@ const ARTIST_DETAILS = [
 ]
 
 /*
-
     this.artistNames = [ 
       "Jodie Hartland",
       "James Hancock",
       "Fraser Owens",
       "Chonlachat Srisompetch",
-      "Tiarnan McCarthy",
+      "Tim McCarthy",
       "Ena Koitabashi",
       "Patrick Robinson",
       "Jiaxian Liang",

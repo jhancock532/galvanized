@@ -1,0 +1,92 @@
+.comment-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 60;
+  width: 100%;
+  height: 100vh;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__form {
+    background-color: white;
+    padding: $grid;
+    height: max-content;
+    width: 100%;
+
+    @include media-query(md){
+      width: initial;
+    }
+  }
+
+  &__title {
+    @include font-size(xxl);
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__label {
+    white-space: nowrap;
+    align-self: center;
+    margin: 0;
+  }
+
+  &__flex-pair {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $grid;
+    flex-direction: column;
+
+    @include media-query(md){
+      flex-direction: row;
+    }
+  }
+
+  &__button-pair {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: $grid;
+  }
+
+  &__feedback-target-dropdown {
+    text-align: center;
+
+    @include media-query(md){
+      margin-left: $grid;
+      text-align: left;
+    }
+  }
+
+  &__comment {
+    width: 100%;
+    height: $grid * 4;
+    resize: none;
+
+    @include media-query(md){
+      height: $grid * 3;
+    }
+  }
+
+  &__name {
+    @include media-query(md){
+      margin-left: $grid;
+    }
+    width: 100%;
+  }
+
+  &__name,
+  &__label,
+  &__comment,
+  &__artist-selector,
+  &__artist-option {
+    @include font-size(m);
+    font-family: $font-primary;
+  }
+}

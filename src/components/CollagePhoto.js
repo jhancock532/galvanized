@@ -53,30 +53,34 @@ class CollagePhoto extends React.Component {
       selectionHoverStyling = { zIndex: 100 }
     }
 
-    return (
-      <div 
-        className={collagePhotoClassNames}  
-        style={selectionHoverStyling}
-      >
-        <img 
-          className={"collage-photo__image"} 
-          alt="" 
-          src={this.props.photo} 
-          onClick={this.handleClick}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        />
-        <img 
-          style={photoHoverStyling} 
-          className={"collage-photo__hover-image"}
-          alt=""
-          src={this.props.photo}
-          onClick={this.handleClick}
-          onMouseEnter={this.handleMouseEnter}
-          onMouseLeave={this.handleMouseLeave}
-        />
-      </div>
-    );
+    if (this.props.artistSelected === null) {
+      return (
+        <div 
+          className={collagePhotoClassNames}  
+          style={selectionHoverStyling}
+        >
+          <img 
+            className={"collage-photo__image"} 
+            alt="" 
+            src={this.props.photo} 
+            onClick={this.handleClick}
+            onMouseEnter={this.handleMouseEnter}
+            onMouseLeave={this.handleMouseLeave}
+          />
+          <img 
+            style={photoHoverStyling} 
+            className={"collage-photo__hover-image"}
+            alt=""
+            src={this.props.photo}
+            onClick={this.handleClick}
+            onMouseEnter={this.handleMouseEnter}
+            onMouseLeave={this.handleMouseLeave}
+          />
+        </div>
+      );
+    } else {
+      return null;
+    }
   }
 }
 
