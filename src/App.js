@@ -9,8 +9,6 @@ import ARTIST_DETAILS from './artistDetails';
 import ArtistShowcase from './components/ArtistShowcase';
 import Silhouette from './components/Silhouette';
 
-//
-
 //<h1 className="center">{this.state.artistSelected}</h1>
 //<ArtistOverview artistDetails={ARTIST_DETAILS} setActiveArtist={this.setActiveArtist}/>
         

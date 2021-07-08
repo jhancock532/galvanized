@@ -1,6 +1,7 @@
 import React from 'react';
 import Sketchpad from './Sketchpad';
 import CommentForm from './CommentForm';
+import SubmissionsGallery from './SubmissionsGallery';
 
 class Guestbook extends React.Component {
   constructor(props) {
@@ -9,14 +10,18 @@ class Guestbook extends React.Component {
       isOpen: false,
       sketchpadOpen: false,
       commentFormOpen: false,
+      submissionsGalleryOpen: false,
     };
 
     this.toggleGuestbookDisplay = this.toggleGuestbookDisplay.bind(this);
+
+    //Replace these with a simple toggle function?
     this.openSketchpad = this.openSketchpad.bind(this);
     this.closeSketchpad = this.closeSketchpad.bind(this);
     this.openCommentForm = this.openCommentForm.bind(this);
     this.closeCommentForm = this.closeCommentForm.bind(this);
-    this.getSketches = this.getSketches.bind(this);
+    this.openSubmissionsGallery = this.openSubmissionsGallery.bind(this);
+    this.closeSubmissionsGallery = this.closeSubmissionsGallery.bind(this);
   }
 
   toggleGuestbookDisplay(){
@@ -37,6 +42,18 @@ class Guestbook extends React.Component {
     })
   }
 
+  openSubmissionsGallery(){
+    this.setState({
+      submissionsGalleryOpen: true,
+    })
+  }
+
+  closeSubmissionsGallery(){
+    this.setState({
+      submissionsGalleryOpen: false,
+    })
+  }
+
   openCommentForm(){
     this.setState({
       commentFormOpen: true,
@@ -47,12 +64,6 @@ class Guestbook extends React.Component {
     this.setState({
       commentFormOpen: false,
     })
-  }
-
-  getSketches(){
-    fetch('http://135.125.205.105/mashow/get_doodles.php?for=everyone')
-      .then(response => response.json())
-      .then(data => console.log(data));
   }
 
   render() {
@@ -66,18 +77,22 @@ class Guestbook extends React.Component {
           <div className="guestbook__options">
             <button className="button guestbook__sketchpad-button" onClick={this.openSketchpad}>Leave a drawing</button>
             <button className="button" onClick={this.openCommentForm}>Leave a comment</button>
-            <div className="guestbook__view-submissions-button button--subtle" onClick={this.getSketches}>View guestbook <br></br>submissions</div>
+            <div className="guestbook__view-submissions-button button--subtle" onClick={this.openSubmissionsGallery}>View guestbook <br></br>submissions</div>
           </div> 
-          : <></>
+          : null
         }
       </div>
       { this.state.sketchpadOpen ?
         <Sketchpad closeSketchpad={this.closeSketchpad} artistSelected={this.props.artistSelected} />
-        : <></>
+        : null
       }
       { this.state.commentFormOpen ?
         <CommentForm closeCommentForm={this.closeCommentForm} artistSelected={this.props.artistSelected} />
-        : <></>
+        : null
+      }
+      { this.state.submissionsGalleryOpen ?
+        <SubmissionsGallery closeSubmissionsGallery={this.closeSubmissionsGallery} artistSelected={this.props.artistSelected} />
+        : null
       }
       </>
     );

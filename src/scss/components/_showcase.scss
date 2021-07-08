@@ -1,0 +1,45 @@
+.showcase {
+  &__content {
+    width: 100%;
+    margin-bottom: $grid * 2;
+
+    @include media-query(md){
+      width: 800px;
+    }
+  }
+
+  &__artwork-title {
+    padding-top: $grid * 5;
+    display: block;
+    margin: 0 auto $grid * 1;
+
+    @include media-query(md) {
+      padding-top: $grid * 4;
+      margin: 0 auto $grid * 1;
+    }
+
+    @include font-size(xxxl);
+    padding-bottom: 4px;
+    width: max-content;
+    border-bottom: 4px solid black;
+  }
+
+  &__paragraph {
+    margin-bottom: $grid * 2;
+    @include font-size(l);
+  }
+
+  &__video-embed {
+    max-width: 640px;
+    display: block;
+    margin: 0 auto;
+
+    &__subtitle {
+      text-align: center;
+      font-family: $font-primary;
+      @include font-size(l);
+      padding-top: 4px;
+      color: $color--dark-grey;
+    }
+  }
+}

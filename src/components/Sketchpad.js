@@ -15,6 +15,8 @@ class Sketchpad extends React.Component {
       color: toColor("#ffffff"),
     };
 
+    this.canvasRef = React.createRef();
+
     this.toggleGuestbookDisplay = this.toggleGuestbookDisplay.bind(this);
     this.updateColorPicker = this.updateColorPicker.bind(this);
     this.handleBrushSizeChange = this.handleBrushSizeChange.bind(this);
@@ -40,7 +42,9 @@ class Sketchpad extends React.Component {
   }
 
   submitSketch(){
-    const ctx = document.getElementById("sketchpad-canvas").getContext("2d")
+    //const ctx = this.canvasRef.current.getContext("2d");
+    //const data = ctx.getImageData(0,0, 640, 480);
+
     const xhr = new XMLHttpRequest();
 
     const name = prompt("Please enter your name. (Optional)");
@@ -62,12 +66,13 @@ class Sketchpad extends React.Component {
     };
 
     const POST_DATA = [
-      "image_data=" + ctx.canvas.toDataURL(),
       "respond_to=" + document.getElementById("sketchpad-response-selector").value,
-      "name=" + name
+      "name=" + name,
+      "image_data=" + this.canvasRef.current.toDataURL()
     ].join("&");
 
     xhr.send(POST_DATA);
+    console.log(POST_DATA);
 
     this.props.closeSketchpad();
   }
@@ -89,6 +94,7 @@ class Sketchpad extends React.Component {
     return (
       <div className="sketchpad">
         <Canvas className="sketchpad__canvas" 
+          canvasRef={this.canvasRef}
           brushSize={this.state.brushSize} 
           brushColor={this.state.color}
           width="640" height="480" 

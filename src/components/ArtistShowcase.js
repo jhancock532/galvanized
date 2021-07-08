@@ -21,7 +21,7 @@ class ArtistShowcase extends React.Component {
     return (
       <div className="artist-showcase__container">
         <div className="artist-showcase__exit-button">
-          <div className="button" onClick={this.props.removeActiveArtist}>Return to Show Homepage</div>
+          <div className="button" onClick={this.props.removeActiveArtist}>Return to Homepage ✖</div>
         </div>
         { artistContent }
       </div>

@@ -1,0 +1,199 @@
+.submissions-gallery {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 100%;
+  height: max-content;
+  z-index: 60;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  @include media-query(md){
+    display: flex;
+    justify-content: center;
+  }
+
+  &__feed {
+    width: 100%;
+    text-align: center;
+    margin-top: 2 * $grid;
+
+    @include media-query(md){
+      width: 800px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    color: $color--white;
+    padding: 0 $grid;
+
+    @include font-size(xxxl);
+
+    @include media-query(sm){
+      margin-top: 3 * $grid;
+    }
+
+    @include media-query(md){
+      margin-top: 4 * $grid
+    }
+  }
+
+  &__exit-button {
+    margin: 0 auto;
+
+    @include media-query(md){
+      position: fixed;
+      top: $grid * 2;
+      right: $grid * 2;
+    }
+
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: $grid;
+    margin-bottom: $grid * 2;
+
+    @include media-query(md){
+      margin-bottom: $grid * 4;
+    }
+  }
+
+  &__checkboxes {
+    @include media-query(sm){ 
+      display: flex;
+      gap: $grid;
+    }
+
+  }
+
+  &__checkbox {
+    margin-bottom: $grid / 2;
+
+    @include media-query(sm){ 
+      margin-bottom: 0;
+    }
+  }
+
+  &__checkbox-label {
+    font-family: $font-primary;
+    @include font-size(l);
+    color: white;
+  }
+
+  &__checkbox-input {
+    transform: scale(1.3);
+    margin-right: $grid / 2;
+  }
+
+  &__filter {
+    margin-top: $grid / 2;
+
+    @include media-query(sm) {
+      margin-top: $grid;
+    }
+
+    @include media-query(md){ 
+      display: flex;
+      align-items: baseline;
+      gap: $grid;
+    }
+  }
+
+  &__filter-label {
+    color: white;
+    padding-bottom: 4px;
+    @include font-size(l);
+    font-family: $font-primary;
+  }
+
+  &__filter-select {
+    @include font-size(l);
+    font-family: $font-primary;
+  }
+
+  &__comment {
+    background: white;
+    padding: $grid;
+    font-family: $font-primary;
+    margin: $grid;
+
+    @include media-query(sm){
+      margin: $grid * 2;
+    }
+    
+  }
+
+  &__comment-for {
+    @include font-size(m);
+
+    @media (min-width: 680px) {
+      text-align: left;
+    }
+  }
+
+  &__comment-body {
+    padding: $grid;
+    @include font-size(l);
+
+    @include media-query(sm){
+      padding: $grid * 2 $grid;
+    }
+  }
+
+  &__comment-details {
+    @include font-size(m);
+
+    @media (min-width: 680px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__drawing {
+    background: white;
+    padding: $grid;
+    font-family: $font-primary;
+    margin: $grid;
+
+    @include media-query(sm){
+      margin: $grid * 2;
+    }
+    
+  }
+
+  &__drawing-for {
+    @include font-size(m);
+
+    @media (min-width: 680px) {
+      text-align: left;
+    }
+  }
+
+  &__drawing-body {
+    padding-bottom: $grid;
+    @include media-query(md){
+      padding: 0;
+      padding-bottom: $grid;
+    }
+    
+    & > img {
+      max-width: 100%;
+      @include media-query(md){
+        height: 390px;
+      }
+    }
+  }
+
+  &__drawing-details {
+    @include font-size(m);
+
+    @media (min-width: 680px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

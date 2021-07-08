@@ -3,4 +3,12 @@
   top: $grid;
   right: $grid;
   z-index: 6;
+
+  &__logo {
+    width: 500px;
+  }
+
+  &__description {
+    float: right;
+  }
 }

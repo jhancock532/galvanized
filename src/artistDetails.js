@@ -4,7 +4,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "../img/james/jellyparty.png",
+    image: "../img/jodie/artwork.png",
     contact: "email",
   },
   { 

@@ -8,10 +8,22 @@
     filter: hue-rotate(90deg) brightness(1.25);
   }
 
+  &__cover {
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
+    width: 50vmin;
+    background-image: radial-gradient(transparent 55%, #eee 75%);
+    background-size: 12px 12px;
+  }
+
   &__hover-image {
     cursor: pointer;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     left: 0;
     bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
     width: 50vmin;

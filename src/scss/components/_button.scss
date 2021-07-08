@@ -65,4 +65,26 @@
       border: 2px solid white;
     }
   }
+
+  &--exit {
+    font-family: $font-primary;
+    padding: $grid / 2;
+    border: 2px solid black;
+    text-decoration: underline;
+    background-color: white;
+    color: black;
+    text-align: center;
+    user-select: none;
+    height: max-content;
+    cursor: pointer;
+    @include font-size(l);
+
+    &:hover {
+      outline: 4px solid white;
+    }
+
+    &:active {
+      outline: 4px solid black;
+    }
+  }
 }

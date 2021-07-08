@@ -6,7 +6,6 @@ class Canvas extends React.Component {
 
   constructor(props) {
     super(props);
-    this.canvasRef = React.createRef();
 
     this.state = {
       mousePressedDown: false,
@@ -18,7 +17,7 @@ class Canvas extends React.Component {
   }
   
   componentDidMount() {
-    this.ctx = this.canvasRef.current.getContext("2d");
+    this.ctx = this.props.canvasRef.current.getContext("2d");
     this.ctx.fillStyle = '#ffffff'
     this.ctx.fillRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
   }  
@@ -56,7 +55,7 @@ class Canvas extends React.Component {
 
   render() {
     return(
-      <canvas ref={this.canvasRef}
+      <canvas ref={this.props.canvasRef}
         id="sketchpad-canvas"
         className="sketchpad__canvas" 
         width="640" height="480" 

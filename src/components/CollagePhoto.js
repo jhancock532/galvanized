@@ -60,13 +60,14 @@ class CollagePhoto extends React.Component {
           style={selectionHoverStyling}
         >
           <img 
-            className={"collage-photo__image"} 
+            className="collage-photo__image"
             alt="" 
             src={this.props.photo} 
             onClick={this.handleClick}
             onMouseEnter={this.handleMouseEnter}
             onMouseLeave={this.handleMouseLeave}
           />
+          <div className="collage-photo__cover"></div>
           <img 
             style={photoHoverStyling} 
             className={"collage-photo__hover-image"}
