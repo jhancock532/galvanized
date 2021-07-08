@@ -21,7 +21,7 @@ class CollagePhoto extends React.Component {
       transition: `opacity 0.5s ease`
     };
 
-    this.artistName = this.props.name.replace(" ", "-");
+    this.artistName = this.props.name.replace(" ", "-").replace(" ", "-");
 
   }
 

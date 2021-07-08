@@ -16,7 +16,7 @@ const ARTIST_DETAILS = [
     contact: "email", 
   },
   { 
-    name:"Fraser Owens",
+    name:"Vincent Keep",
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
@@ -28,7 +28,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -36,7 +36,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -44,7 +44,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -52,7 +52,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -60,7 +60,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -68,7 +68,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -76,7 +76,7 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
@@ -84,23 +84,23 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   },
   { 
-    name:"Ches Wintie",
+    name:"Puppyuck",
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/puppyuck/artwork.png",
     contact: "email", 
   },
   { 
-    name:"Eille Robinson",
+    name:"Lemayr",
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "./logo.svg",
+    image: "../img/jodie/artwork.png",
     contact: "email", 
   }
 ]

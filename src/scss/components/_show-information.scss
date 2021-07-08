@@ -3,6 +3,7 @@
   top: $grid;
   right: $grid;
   z-index: 6;
+  pointer-events: none;
 
   &__logo {
     width: 500px;
