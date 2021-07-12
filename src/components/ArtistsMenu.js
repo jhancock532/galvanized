@@ -17,6 +17,7 @@ class ArtistsMenu extends React.Component {
   }
 
   render() {
+
     //This creates all the artist options in the menu
     const artistMenuOptions = this.props.artistDetails.map((artist) => 
       <ArtistMenuOption 
@@ -32,7 +33,7 @@ class ArtistsMenu extends React.Component {
 
     return (
       <div className="artists-menu">
-        <div className="button" onClick={this.handleClick}> 
+        <div className="button artists-menu__show-artists-button" onClick={this.handleClick}> 
           {this.state.isMenuOpen ? 'Hide Artists' : 'Show Artists'} 
         </div>
 

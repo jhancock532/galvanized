@@ -22,6 +22,7 @@ class ArtistShowcase extends React.Component {
 
   render() {
     if (this.props.artistSelected === null) return null;
+    window.scrollTo(0, 0);
 
     let artistContent;
 

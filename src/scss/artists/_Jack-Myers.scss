@@ -1,8 +1,10 @@
 .Jack-Myers {
   &__collage-photo {
+    @include media-query(md){
     top: calc(50%);
     left: calc(50%);
     transform: translate(-50%, -50%) translate(30vmin, -30vmin);
     z-index: 2;
+    }
   }
 }

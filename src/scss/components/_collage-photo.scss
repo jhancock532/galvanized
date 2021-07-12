@@ -1,32 +1,60 @@
 .collage-photo {
-  position: absolute;
+  position: relative;
+  @include media-query(md){
+    position: absolute;
+  }
 
   &__image {
-    width: 50vmin;
-    user-select: none;
-    z-index: 1;
-    filter: hue-rotate(90deg) brightness(1.25);
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+    @include media-query(md){
+      width: 50vmin;
+      user-select: none;
+      z-index: 1;
+    }
+    //filter: hue-rotate(90deg) brightness(1.25);
   }
 
   &__cover {
     position: absolute;
-    pointer-events: none;
-    z-index: 2;
     left: 0;
     top: 0;
     bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
-    width: 50vmin;
-    background-image: radial-gradient(transparent 55%, #eee 75%);
-    background-size: 12px 12px;
+
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+    @include media-query(md){
+      background-image: radial-gradient(transparent 55%, rgba(255, 255, 255, 0.936) 75%);
+      background-size: 6px 6px;
+      width: 50vmin;
+    }
+    pointer-events: none;
+    z-index: 2;
+
+    background-image: linear-gradient( to bottom, white 0%, transparent 5%, transparent 95%, white 100% ), radial-gradient(transparent 55%, rgba(255, 255, 255, 0.192) 75%);
+    background-size: 100% 100%, 8px 8px;
+
   }
 
   &__hover-image {
-    cursor: pointer;
+
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
     position: absolute;
     z-index: 3;
     left: 0;
+    cursor: pointer;
     bottom: 4px; //No idea why??? makes the images overlap each other perfectly.
-    width: 50vmin;
+    @include media-query(md){
+      
+      width: 50vmin;
+    }
   }
 
 }

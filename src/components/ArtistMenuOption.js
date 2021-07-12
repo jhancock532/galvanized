@@ -11,16 +11,21 @@ class ArtistMenuOption extends React.Component {
 
     this.angleOffset = -1 + Math.random() * 2;
 
+    let xBasis = 20;
+    if (window.innerWidth >= 800){
+      xBasis = 0;
+    }
+
     this.menuOpenStyles = {
       opacity: 1,
-      transform: `translateX(${Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
+      transform: `translateX(${xBasis + Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
       transition: `transform ${0.6 + Math.random() * 0.2}s cubic-bezier(0.435, 0.040, 0.285, 0.995), opacity 0.5s ease`,
       pointerEvents: `all`
     };
 
     this.menuClosedStyles = {
       opacity: 0,
-      transform: `translateX(${-10 - Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
+      transform: `translateX(${xBasis + -10 - Math.random() * 20}px) rotateZ(${this.angleOffset}deg)`,
       transition: `transform 0.5s ease, opacity 0.5s ease`,
       pointerEvents: `none`
     };
@@ -48,7 +53,7 @@ class ArtistMenuOption extends React.Component {
       styling = this.menuClosedStyles;
     }
 
-    if (this.props.hoveredArtist === this.props.name){
+    if (this.props.hoveredArtist === this.props.name && window.innerWidth >= 800){
       styling = this.menuOpenStyles;
     }
 

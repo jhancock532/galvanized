@@ -49,7 +49,7 @@ class CollagePhoto extends React.Component {
     }
 
     let selectionHoverStyling;
-    if (this.props.name === this.props.hoveredArtist) {
+    if (this.props.name === this.props.hoveredArtist && window.innerWidth >= 800) {
       selectionHoverStyling = { zIndex: 100 }
     }
 

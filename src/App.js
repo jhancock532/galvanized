@@ -7,6 +7,7 @@ import './scss/main.scss';
 import ARTIST_DETAILS from './artistDetails';
 import ArtistShowcase from './components/ArtistShowcase';
 import InformationPage from './components/InformationPage';
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -63,7 +64,8 @@ class App extends React.Component {
 
   toggleShowInformation(){
     this.setState(state => ({
-      showInformation: !state.showInformation
+      showInformation: !state.showInformation,
+      noScroll: !state.showInformation
     }));
   }
 
@@ -77,6 +79,11 @@ class App extends React.Component {
 
     return (
       <div className="App">
+
+        <ShowInformation toggleShowInformation={this.toggleShowInformation}/>
+        { this.state.showInformation ? 
+        <InformationPage toggleShowInformation={this.toggleShowInformation}/>
+        : null }
 
         <ArtistsMenu 
           artistDetails={ARTIST_DETAILS} 
@@ -95,16 +102,14 @@ class App extends React.Component {
           artistSelected={this.state.artistSelected}
         />
 
-        <ShowInformation toggleShowInformation={this.toggleShowInformation}/>
-        { this.state.showInformation ? 
-        <InformationPage toggleShowInformation={this.toggleShowInformation}/>
-        : null }
+
 
         <ArtistShowcase 
           artistSelected={this.state.artistSelected} 
           removeActiveArtist={this.removeActiveArtist}
         />
         <Guestbook artistSelected={this.state.artistSelected} setNoScroll={this.setNoScroll}/>
+        <Footer />
       </div>
     );
   }

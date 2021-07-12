@@ -11,7 +11,7 @@ class ShowInformation extends React.Component {
           <p>Digital Media Arts 2021</p>
           <p>Master's Degree Exhibition</p>
           <p>University of Brighton</p>
-          <button onClick={this.props.toggleShowInformation} class="button button--small">Exhibition Information</button>
+          <button onClick={this.props.toggleShowInformation} class="button button--small show-information__button">Exhibition Information</button>
         </div>
       </div>
     );

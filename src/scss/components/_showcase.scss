@@ -9,22 +9,27 @@
   }
 
   &__artwork-title {
-    padding-top: $grid * 5;
     display: block;
-    margin: 0 auto $grid * 1;
+    margin: $grid * 5 0 $grid * 1;
+    padding: 0 $grid;
+    overflow-wrap: break-word;
 
     @include media-query(md) {
-      padding-top: $grid * 4;
-      margin: 0 auto $grid * 1;
+      width: max-content;
+      padding: 0;
+      margin: $grid * 4 auto $grid * 1;
     }
 
     @include font-size(xxxl);
     padding-bottom: 4px;
-    width: max-content;
     border-bottom: 4px solid black;
   }
 
   &__paragraph {
+    padding: 0 $grid;
+    @include media-query(md){
+      padding: 0;
+    }
     margin-bottom: $grid * 2;
     @include font-size(l);
   }

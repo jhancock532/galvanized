@@ -1,0 +1,21 @@
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: $grid * 2 0 $grid * 2;
+  flex-direction: column;
+
+  @include media-query(md){
+    display: none;
+  }
+
+  &__logo {
+    width: 100px;
+  }
+
+  &__small {
+    padding: $grid;
+    @include font-size(s);
+    text-align: center;
+  }
+}

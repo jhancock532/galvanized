@@ -16,7 +16,7 @@ class Chonlachat extends React.Component {
         </p>
 
         <div className="showcase__center-button">
-          <a target="_blank" href="http://www.csxwork.com/works/machine1/" className="button button--large">Visit Website</a>
+          <a target="_blank" rel="noreferrer" href="http://www.csxwork.com/works/machine1/" className="button button--large">Visit Website</a>
         </div>
         <h1 className="showcase__author-subtitle">By Chonlachat Srisompetch</h1>
       </div>

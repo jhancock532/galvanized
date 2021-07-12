@@ -12,6 +12,7 @@ class InformationPage extends React.Component {
         </div>
         <div className="information-page__content">
           <h1 className="information-page__title">About Galvanised</h1>
+          <img className="information-page__logo" src="../img/logos.png" alt="Galvanized logo"/>
           <p className="information-page__paragraph">
             Galvanised is the course show for the Digital Media Arts cohort of 2021.
           </p>

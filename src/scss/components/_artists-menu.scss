@@ -1,8 +1,29 @@
 .artists-menu {
-  position: absolute;
-  top: $grid;
-  left: $grid;
-  position: relative;
-  z-index: 10;
-  width: 0px;
+  &__show-artists-button {
+    margin: $grid auto $grid;
+    font-size: 18px !important;
+
+    @include media-query(md){
+      font-size: 22px !important;
+      margin: 0;
+    }
+  }
+
+  &__options {
+    height: 0;
+
+    @include media-query(md){
+      height: initial;
+    }
+  }
+
+  @include media-query(md){
+    position: absolute;
+    top: $grid;
+    left: $grid;
+    position: relative;
+    z-index: 10;
+    width: 0px;
+  }
+
 }

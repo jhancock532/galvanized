@@ -1,8 +1,10 @@
 .Tim-McCarthy {
   &__collage-photo {
+    @include media-query(md){
     top: calc(50%);
     left: calc(50%);
     transform: translate(-50%, -50%) translate(-10vmin, -25vmin);
     z-index: 2;
+    }
   }
 }

@@ -1,9 +1,11 @@
 .Vincent-Keep {
 
   &__collage-photo {
+    @include media-query(md){
     top: calc(50%);
     left: calc(50%);
     transform: translate(-50%, -50%) translate(30vmin, 35vmin);
+    }
 
     //> .collage-photo__image {
       //clip-path: polygon(0% 100%, 0% 20%, 50% 70%, 50% 0%, 90% 0%, 100% 100%);

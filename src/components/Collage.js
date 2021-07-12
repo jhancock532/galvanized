@@ -8,6 +8,12 @@ class Collage extends React.Component {
   }
 
   render() {
+
+    let mobilePhoto = false;
+    if (window.innerWidth < 800){
+      mobilePhoto = true;
+    }
+
     const collagePhotos = this.props.artistDetails.map((artist) => 
       <CollagePhoto 
         key={artist.name} 
@@ -18,6 +24,7 @@ class Collage extends React.Component {
         resetHoveredArtist={this.props.resetHoveredArtist}
         hoveredArtist={this.props.hoveredArtist}
         artistSelected={this.props.artistSelected}
+        mobile={mobilePhoto}
       />
     );
 

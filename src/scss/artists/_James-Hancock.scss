@@ -1,14 +1,11 @@
 .James-Hancock {
 
   &__collage-photo {
+    @include media-query(md){
     top: calc(50%);
     left: calc(50%);
     transform: translate(-50%, -50%) translate(-10vmin, 10vmin);
-
-    //> .collage-photo__image {
-      //clip-path: polygon(0% 0%, 50% 0%, 50% 50%, 100% 50%, 100% 100%, 0% 100%);
-    //}
-    
+    }
   }
 
   &__title {
