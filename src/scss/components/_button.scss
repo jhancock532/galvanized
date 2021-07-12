@@ -87,4 +87,13 @@
       outline: 4px solid black;
     }
   }
+
+  &--large {
+    @include font-size(xl);
+    padding: $grid * 0.8 $grid;
+  }
+
+  &--small {
+    @include font-size(m);
+  }
 }

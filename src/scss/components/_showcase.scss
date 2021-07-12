@@ -40,6 +40,18 @@
       @include font-size(l);
       padding-top: 4px;
       color: $color--dark-grey;
+
+      @include media-query(md){
+        margin-bottom: $grid * 2;
+      }
+    }
+  }
+
+  &__center-button {
+    text-align: center;
+    margin-bottom: $grid;
+    @include media-query(md){ 
+      margin-bottom: $grid * 3;
     }
   }
 }

@@ -3,13 +3,27 @@
   top: $grid;
   right: $grid;
   z-index: 6;
-  pointer-events: none;
 
   &__logo {
     width: 500px;
+    //padding: $grid / 2;
+    //background: white;
+    //border: 2px solid black;
   }
 
   &__description {
-    float: right;
+    margin: 0 0 0 auto;
+    display: block;
+    width: max-content;
+    padding: $grid;
+    @include font-size(m);
+    background: white;
+    //border: 2px solid black;
+    text-align: center;
+    line-height: 0.8em;
+
+    > p:first-child, > p:last-child {
+      margin: 0;
+    }
   }
 }

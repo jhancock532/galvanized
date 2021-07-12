@@ -1,0 +1,12 @@
+.contact {
+  text-align: center;
+
+  &__cta {
+    background: black;
+    color: white;
+    width: max-content;
+    margin: $grid * 4 auto $grid;
+    display: block;
+    padding: $grid / 2 $grid;
+  }
+}

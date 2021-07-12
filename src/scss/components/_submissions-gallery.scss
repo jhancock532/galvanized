@@ -1,10 +1,10 @@
 .submissions-gallery {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  min-height: 100%;
-  height: max-content;
+  height: 100vh;
+  overflow-y: scroll;
   z-index: 60;
   background-color: rgba(0, 0, 0, 0.9);
 

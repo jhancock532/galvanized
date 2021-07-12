@@ -34,36 +34,42 @@ class Guestbook extends React.Component {
     this.setState({
       sketchpadOpen: true,
     })
+    this.props.setNoScroll(true);
   }
 
   closeSketchpad(){
     this.setState({
       sketchpadOpen: false,
     })
+    this.props.setNoScroll(false);
   }
 
   openSubmissionsGallery(){
     this.setState({
       submissionsGalleryOpen: true,
     })
+    this.props.setNoScroll(true);
   }
 
   closeSubmissionsGallery(){
     this.setState({
       submissionsGalleryOpen: false,
     })
+    this.props.setNoScroll(false);
   }
 
   openCommentForm(){
     this.setState({
       commentFormOpen: true,
     })
+    this.props.setNoScroll(true);
   }
 
   closeCommentForm(){
     this.setState({
       commentFormOpen: false,
     })
+    this.props.setNoScroll(false);
   }
 
   render() {

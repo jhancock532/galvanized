@@ -6,7 +6,7 @@ class Molly extends React.Component {
   render() {
     return (
       <div className="showcase__content Molly-Stanners-Putland">
-        <h1 className="showcase__artwork-title">Sims Videos</h1>
+        <h1 className="showcase__artwork-title">Molly Stanners Putland</h1>
         <VideoEmbed url="https://www.youtube.com/watch?v=ysz5S6PUM-U" subtitle="Trailer Video"/>
 
         <h1 className="showcase__author-subtitle">By Molly</h1>

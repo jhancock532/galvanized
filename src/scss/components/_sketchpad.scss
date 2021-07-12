@@ -5,8 +5,10 @@
   right: 0;
   z-index: 60;
   background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  overflow-y: scroll;
 
-  padding: $grid 0;
+  padding: $grid * 1 0 0 0;
   display: grid;
   gap: $grid;
 

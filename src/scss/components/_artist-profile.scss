@@ -1,0 +1,25 @@
+.artist-profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @include media-query(md){
+    flex-direction: row;
+    gap: $grid;
+  }
+
+  &__image {
+    width: 100%;
+    height: min-content;
+
+    @include media-query(md){
+      width: 30vw;
+    }
+  
+  }
+
+  &__content {
+    font-family: $font-primary;
+    @include font-size(l);
+  }
+}

@@ -2,16 +2,11 @@ import React from 'react';
 import ArtistsMenu from './components/ArtistsMenu';
 import ShowInformation from './components/ShowInformation';
 import Guestbook from './components/GuestBook';
-//import ArtistOverview from './components/ArtistOverview';
 import Collage from './components/Collage';
 import './scss/main.scss';
 import ARTIST_DETAILS from './artistDetails';
 import ArtistShowcase from './components/ArtistShowcase';
-import Silhouette from './components/Silhouette';
-
-//<h1 className="center">{this.state.artistSelected}</h1>
-//<ArtistOverview artistDetails={ARTIST_DETAILS} setActiveArtist={this.setActiveArtist}/>
-        
+import InformationPage from './components/InformationPage';
 
 class App extends React.Component {
   constructor(props) {
@@ -21,12 +16,16 @@ class App extends React.Component {
       isArtistSelected: false, 
       artistSelected: null,
       hoveredArtist: null,
+      noScroll: false,
+      showInformation: false,
     };
 
     this.setActiveArtist = this.setActiveArtist.bind(this);
     this.setHoveredArtist = this.setHoveredArtist.bind(this);
     this.resetHoveredArtist = this.resetHoveredArtist.bind(this);
     this.removeActiveArtist = this.removeActiveArtist.bind(this);
+    this.setNoScroll = this.setNoScroll.bind(this);
+    this.toggleShowInformation = this.toggleShowInformation.bind(this);
   }
 
   setActiveArtist(artist) {
@@ -56,7 +55,26 @@ class App extends React.Component {
     })
   }
 
+  setNoScroll(value) {
+    this.setState({
+      noScroll: value
+    })
+  }
+
+  toggleShowInformation(){
+    this.setState(state => ({
+      showInformation: !state.showInformation
+    }));
+  }
+
   render() {
+
+    if (this.state.noScroll) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "initial";
+    }
+
     return (
       <div className="App">
 
@@ -77,13 +95,16 @@ class App extends React.Component {
           artistSelected={this.state.artistSelected}
         />
 
-        <ShowInformation />
+        <ShowInformation toggleShowInformation={this.toggleShowInformation}/>
+        { this.state.showInformation ? 
+        <InformationPage toggleShowInformation={this.toggleShowInformation}/>
+        : null }
+
         <ArtistShowcase 
           artistSelected={this.state.artistSelected} 
           removeActiveArtist={this.removeActiveArtist}
         />
-        <Guestbook artistSelected={this.state.artistSelected} />
-        <Silhouette />
+        <Guestbook artistSelected={this.state.artistSelected} setNoScroll={this.setNoScroll}/>
       </div>
     );
   }
