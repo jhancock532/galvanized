@@ -98,4 +98,18 @@
   &__image {
     width: 100%;
   }
+
+  &__image-description {
+    font-family: $font-primary;
+    width: 80%;
+    margin: 4px auto $grid;
+    text-align: center;
+    @include font-size(l);
+  }
+
+  &__two-images {
+    display: flex;
+    flex-direction: row;
+    gap: $grid;
+  }
 }

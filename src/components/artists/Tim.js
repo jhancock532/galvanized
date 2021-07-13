@@ -1,5 +1,4 @@
 import React from 'react';
-import ArtistProfile from '../showcase/ArtistProfile';
 import VideoEmbed from '../showcase/VideoEmbed';
 
 class Tim extends React.Component {
