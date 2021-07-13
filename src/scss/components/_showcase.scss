@@ -59,4 +59,43 @@
       margin-bottom: $grid * 3;
     }
   }
+
+  &__list {
+    list-style: square;
+    > li {
+      margin-bottom: $grid;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__four-buttons {
+    display: grid;
+    gap: $grid;
+    margin-bottom: $grid * 2;
+    justify-items: center;
+
+    @include media-query(sm){
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: min-content min-content;
+    }
+    
+  }
+
+  &__left-button {
+    @include media-query(sm){
+    justify-self: right;
+    }
+  }
+  &__right-button {
+    @include media-query(sm){
+    justify-self: left;
+    }
+  }
+
+  &__image {
+    width: 100%;
+  }
 }

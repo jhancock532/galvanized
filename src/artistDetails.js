@@ -68,15 +68,12 @@ const ARTIST_DETAILS = [
     title: "Artwork Title",
     tagline: "A short description of the artwork to introduce the visitor.",
     description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "../img/jodie/artwork.png",
+    image: "../img/jack/artwork.png",
     contact: "email", 
   },
   { 
     name:"Omar Hamouda",
-    title: "Artwork Title",
-    tagline: "A short description of the artwork to introduce the visitor.",
-    description: "A much longer piece of writing, spanning multiple lines, with markdown",
-    image: "../img/jodie/artwork.png",
+    image: "../img/omar/artwork.png",
     contact: "email", 
   },
   { 

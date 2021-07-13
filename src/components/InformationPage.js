@@ -16,7 +16,7 @@ class InformationPage extends React.Component {
           <p className="information-page__paragraph">
             Galvanised is the course show for the Digital Media Arts cohort of 2021.
           </p>
-          <VideoEmbed url="https://www.youtube.com/watch?v=ysz5S6PUM-U" subtitle="Showreel"/>
+          <VideoEmbed url="https://www.youtube.com/watch?v=GX-z9XOo1PY" subtitle="Showreel"/>
 
         </div>
       </div>
