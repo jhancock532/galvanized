@@ -39,7 +39,7 @@ class Vincent extends React.Component {
         <Contact 
           email="hello@vincentkeep.com" 
           instagram="https://www.instagram.com/vincentkeep/"
-          website="vincentkeep.com"
+          website="https://vincentkeep.com"
         />
         
       </div>

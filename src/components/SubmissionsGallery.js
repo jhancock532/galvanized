@@ -18,13 +18,13 @@ class SubmissionsGallery extends React.Component {
   }
 
   componentDidMount(){
-    fetch('http://135.125.205.105/mashow/get_comments.php?for=all')
+    fetch('//135.125.205.105/mashow/get_comments.php?for=all')
       .then(response => response.json())
       .then(data => {
         this.setState({ comments: data })
       });
 
-    fetch('http://135.125.205.105/mashow/get_doodles.php?for=all')
+    fetch('//135.125.205.105/mashow/get_doodles.php?for=all')
       .then(response => response.json())
       .then(data => {
         this.setState({ drawings: data })
@@ -108,7 +108,7 @@ class SubmissionsGallery extends React.Component {
             feed.splice(i * 2, 0,
               <div className="submissions-gallery__drawing" key={this.state.comments.length + i}>
                 <div className="submissions-gallery__drawing-body">
-                  <img alt="" src={"http://135.125.205.105/mashow/doodles/" + this.state.drawings[i].data}/>
+                  <img alt="" src={"//135.125.205.105/mashow/doodles/" + this.state.drawings[i].data}/>
                 </div>
                 <div className="submissions-gallery__drawing-for">
                   {recipient}

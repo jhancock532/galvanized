@@ -13,7 +13,7 @@ class Omar extends React.Component {
 
         <h1 className="showcase__author-subtitle">By Omar Hamouda</h1>
 
-        <ArtistProfile src="../img/vincent/vincent-small.png" alt="Photo of Omar Hamouda">
+        <ArtistProfile src="../img/logos.png" alt="Omar Hamouda">
         Omar Hamouda is currently focusing on music production and videography. 
         His work blends aesthetics through the use of both contemporary and retro 
         technologies and references. Omar also draws inspiration from a number of 

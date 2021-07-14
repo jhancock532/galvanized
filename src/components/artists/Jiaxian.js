@@ -61,7 +61,7 @@ class Jiaxian extends React.Component {
          imagination, and thus and more importantly, are for fun. 
         </ArtistProfile>
 
-        <Contact email="mecok3263@outlook.com" website="www.machinerose.com"/>
+        <Contact email="mecok3263@outlook.com" website="http://www.machinerose.com"/>
 
       </div>
     );

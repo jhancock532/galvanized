@@ -24,6 +24,8 @@ class Jack extends React.Component {
           <a target="_blank" rel="noreferrer" href="https://www.mediafire.com/file/sd64elxcjrde81k/The_Snow_Storm.rar/file" className="button">Game Download Link</a>
         </div>
 
+        <VideoEmbed url="https://www.youtube.com/watch?v=PmqcCWjOpuI" subtitle="Game Playthrough"/>
+
         <h1 className="showcase__author-subtitle">Created By Jack Myers</h1>
         <ArtistProfile src="../img/jack/jack.png" alt="Jack Myers">
         Jack Myers is a digital media artist and producer. 

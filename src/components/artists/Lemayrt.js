@@ -36,7 +36,9 @@ class Lemayrt extends React.Component {
         their current research and practice within the digital realm. 
         </ArtistProfile>
 
-        <Contact callToAction="Contact Details" instagram="https://www.instagram.com/lemayrt/" />
+        <Contact 
+        website="https://www.lemayrt.com"
+        instagram="https://www.instagram.com/lemayrt/" />
       </div>
     );
   }
