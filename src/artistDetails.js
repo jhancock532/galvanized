@@ -1,82 +1,69 @@
 const ARTIST_DETAILS = [
   { 
+    url: "jodie",
     name: "Jodie Hartland", 
     image: "../img/jodie/artwork.png",
   },
   { 
+    url: "james",
     name:"James Hancock",
     image: "../img/james/fingerprint.png",
   },
   { 
+    url: "vincent",
     name:"Vincent Keep",
     image: "../img/vincent/artwork.png",
   },
   { 
+    url: "chonlachat",
     name:"Chonlachat Srisompetch",
     image: "../img/paul/artwork.jpeg",
   },
   { 
+    url: "tim",
     name:"Tim McCarthy",
     image: "../img/tim/artwork.png",
   },
   { 
+    url: "ena",
     name:"Ena Koitabashi",
     image: "../img/jodie/artwork.png",
   },
   { 
+    url: "patrick",
     name:"Patrick Robinson",
-    image: "../img/jodie/artwork.png",
+    image: "../img/patrick/artwork.png",
   },
   { 
+    url: "jiaxian",
     name:"Jiaxian Liang",
     image: "../img/jodie/artwork.png",
   },
   { 
+    url: "jack",
     name:"Jack Myers",
     image: "../img/jack/artwork.png",
   },
   { 
+    url: "omar",
     name:"Omar Hamouda",
     image: "../img/omar/artwork.png",
   },
   { 
+    url: "molly",
     name:"Molly Stanners Putland",
-    image: "../img/molly/artwork.jpg",
+    image: "../img/molly/artwork.png",
   },
   { 
+    url: "puppyuck",
     name:"Puppyuck",
-    title: "Artwork Title",
-    tagline: "A short description of the artwork to introduce the visitor.",
-    description: "A much longer piece of writing, spanning multiple lines, with markdown",
     image: "../img/puppyuck/artwork.png",
-    contact: "email", 
   },
   { 
+    url: "lemayr",
     name:"Lemayr",
-    title: "Artwork Title",
-    tagline: "A short description of the artwork to introduce the visitor.",
-    description: "A much longer piece of writing, spanning multiple lines, with markdown",
     image: "../img/jodie/artwork.png",
-    contact: "email", 
   }
 ]
-
-/*
-    this.artistNames = [ 
-      "Jodie Hartland",
-      "James Hancock",
-      "Fraser Owens",
-      "Chonlachat Srisompetch",
-      "Tim McCarthy",
-      "Ena Koitabashi",
-      "Patrick Robinson",
-      "Jiaxian Liang",
-      "Jack Myers",
-      "Omar Hamouda",
-      "Molly Stanners Putland",
-      "Ches Wintie",
-      "Eille Robinson" 
-    ];
-*/
 
 export default ARTIST_DETAILS;

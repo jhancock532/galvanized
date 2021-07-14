@@ -1,5 +1,6 @@
 import React from 'react';
 import VideoEmbed from '../showcase/VideoEmbed';
+import Contact from '../showcase/Contact';
 
 class Tim extends React.Component {
 
@@ -7,7 +8,10 @@ class Tim extends React.Component {
     return (
       <div className="showcase__content Tim-McCarthy">
         <h1 className="showcase__artwork-title">#Hashtag</h1>
-        <VideoEmbed url="https://vimeo.com/574152955" subtitle="Gameplay Video"/>
+
+        <img className="showcase__image" src="../img/tim/banner-image.png" alt="a foggy street cluttered with advertising signs"></img>
+
+        
 
         <p className="showcase__paragraph">
           Your privacy is not respected in the digital realm. Personal data is being collected, 
@@ -22,7 +26,7 @@ class Tim extends React.Component {
           <ul className="showcase__list">
           <li>Headphones are recommended.</li>
           <li>If viewing on the web, please click inside the frame before trying to interact. Downloading is recommended.</li>
-          <li>If you are on mobile, or having issues viewing, there is a video provided at the top of this page.</li>
+          <li>If you are on mobile, or having issues viewing, there is a video provided towards the bottom of this page.</li>
           </ul>
         </p>
 
@@ -41,7 +45,7 @@ class Tim extends React.Component {
           </a>
         </div>
 
-        <img className="showcase__image" src="../img/tim/banner-image.png" alt="a foggy street cluttered with advertising signs"></img>
+        <VideoEmbed url="https://vimeo.com/574152955" subtitle="Gameplay Video"/>
 
         <h1 className="showcase__author-subtitle">By Tim McCarthy</h1>
         <p className="showcase__paragraph">
@@ -53,6 +57,10 @@ class Tim extends React.Component {
           perception, expectation and simplification, which I try to incorporate into my work. 
           I’m an advocate for privacy, and I do all my work using free and open source software.
         </p>
+
+        <Contact> 
+          <img style={{marginTop: "20px"}} src="../img/tim/contact.png" alt="contact email address"/>
+        </Contact>
       </div>
     );
   }

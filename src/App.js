@@ -30,18 +30,25 @@ class App extends React.Component {
   }
 
   setActiveArtist(artist) {
-    this.setState({
-      isArtistSelected: true,
-      artistSelected: artist
-    })
-    this.resetHoveredArtist();
+
+    let artistURL = null;
+    for (let i = 0; i < ARTIST_DETAILS.length; i++){
+      if (ARTIST_DETAILS[i].name === artist){
+        artistURL = "/" + ARTIST_DETAILS[i].url;
+        break;
+      }
+    }
+
+    window.location.pathname = artistURL;
   }
 
   removeActiveArtist() {
-    this.setState({
-      isArtistSelected: false,
-      artistSelected: null
-    })
+    window.location.pathname = "/";
+    //this.setState({
+    //  isArtistSelected: false,
+    //  artistSelected: null
+    //})
+    
   }
 
   setHoveredArtist(artist) {
@@ -69,6 +76,37 @@ class App extends React.Component {
     }));
   }
 
+  componentDidMount() {
+    if (window.location.pathname !== "/"){
+      if (window.location.pathname === "/about"){
+        this.setState(state => ({
+          showInformation: !state.showInformation,
+          noScroll: !state.showInformation
+        }));
+      }
+
+      let name = window.location.pathname.substring(1); //removes backslash at start
+
+      let selectedArtist = null;
+      for (let i = 0; i < ARTIST_DETAILS.length; i++){
+        if (ARTIST_DETAILS[i].url === name){
+          selectedArtist = ARTIST_DETAILS[i].name;
+          break;
+        }
+      }
+
+      if (selectedArtist !== null){
+        this.setState({
+          isArtistSelected: true,
+          artistSelected: selectedArtist
+        })
+        
+        this.resetHoveredArtist();
+      }
+
+    }
+  }
+
   render() {
 
     if (this.state.noScroll) {
@@ -76,6 +114,8 @@ class App extends React.Component {
     } else {
       document.body.style.overflowY = "initial";
     }
+
+
 
     return (
       <div className="App">

@@ -112,4 +112,8 @@
     flex-direction: row;
     gap: $grid;
   }
+
+  &__gap {
+    height: $grid;
+  }
 }

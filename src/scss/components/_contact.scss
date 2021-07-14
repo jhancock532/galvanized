@@ -9,4 +9,11 @@
     display: block;
     padding: $grid / 2 $grid;
   }
+
+  &__main-links {
+    display: flex;
+    flex-direction: column;
+    gap: $grid;
+    align-items: center;
+  }
 }
