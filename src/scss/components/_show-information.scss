@@ -2,7 +2,7 @@
 
   @include media-query(md){
     position: absolute;
-    top: $grid;
+    top: 0;
     right: $grid;
     z-index: 6;
     pointer-events: none;
@@ -21,7 +21,7 @@
     }
 
     @include media-query(md){
-      width: 500px;
+      width: 530px;
     }
     //padding: $grid / 2;
     //background: white;
@@ -54,7 +54,7 @@
       margin: 0 0 0 auto;
       display: block;
       width: max-content;
-      padding: $grid;
+      padding: $grid 0 $grid $grid;
       
       background: white;
       //border: 2px solid black;
