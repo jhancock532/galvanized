@@ -78,6 +78,10 @@ class App extends React.Component {
 
   componentDidMount() {
     if (window.location.pathname !== "/"){
+      if (window.location.pathname === "/zoom"){
+        window.location.href="https://zoom.us/j/9646433419";
+      }
+
       if (window.location.pathname === "/about"){
         this.setState(state => ({
           showInformation: !state.showInformation,
