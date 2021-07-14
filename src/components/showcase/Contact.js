@@ -11,6 +11,7 @@ class Contact extends React.Component {
           {this.props.instagram ? <a target="_blank" rel="noreferrer" href={this.props.instagram} class="contact__instagram button">Instagram 📷</a> : null}
           {this.props.twitter ? <a target="_blank" rel="noreferrer" href={this.props.twitter} class="contact__twitter button">Twitter 🐦</a> : null}
           {this.props.youtube ? <a target="_blank" rel="noreferrer" href={this.props.youtube} class="contact__youtube button">YouTube 🎥</a> : null}
+          {this.props.github ? <a target="_blank" rel="noreferrer" href={this.props.github} class="contact__website button">Github 💻</a> : null}
           {this.props.website ? <a target="_blank" rel="noreferrer" href={this.props.website} class="contact__website button">Personal Website</a> : null}
         </div>
         {this.props.children ? 

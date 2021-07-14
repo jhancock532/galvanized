@@ -19,29 +19,51 @@ class James extends React.Component {
         However, as the User discovers, progress isn't always as great as it seems...
         </p>
 
-        
+        <div className="showcase__gap"/>
+        <div className="showcase__center-button">
+          <a target="_blank" rel="noreferrer" href="https://you-are.online" className="button">Visit Website</a>
+        </div>
+
         <p className="showcase__paragraph">
-        This website is designed for desktop devices. If you're on a mobile device and curious to see more,
-        you can watch an edited playthrough of the experience using the YouTube video below.
+        When we consume content online, we are distracted from what happens to our body, often to
+        the extent where our physical presense is entirely forgotten.
+        Online, the mind is held in a world of binary signals; it is carefully nudged 
+        by the creators of modern web services, who have invested heavily in making products 
+        that trap our attention and keep us invested and engaged.
         </p>
 
+        <div className="showcase__two-images">
+          <img className="showcase__image" src="../img/james/detail.jpg" alt="todolist"/>
+          <img className="showcase__image" src="../img/james/glitched.png" alt="social media"/>
+        </div>
+
+        <p className="showcase__paragraph">
+        This website reduces the participants humanity into a series of mindless interactions 
+        for the website's algorithms, mirroring how humans engage in the attention economy of today.
+        The human is just another object in the internet's codes and analytics; the body is forgotten.
+        </p>
+
+        
         <VideoEmbed url="https://www.youtube.com/watch?v=ubBt-ZOB398" subtitle="Playthrough Supercut"/>
+
+        <p className="showcase__paragraph">
+        This website is designed for desktop devices. If you're on a mobile device and curious to see more,
+        you can watch an edited playthrough of the experience using the YouTube video above.
+        </p>
 
         <h1 className="showcase__author-subtitle">Created By James Hancock</h1>
         <ArtistProfile src="../img/james/james.png" alt="James Hancock">
         James Hancock is a creative website developer with a background in computer science 
         and innovation design. James presents the politics of the internet through striking 
         online experiences; from playing with the fundamental operations of the web browser 
-        in labyr.in/th/, he’s also created complex 3D scenes in fingerprint.garden and 
-        you-are.online. His practice is focused on learning new technologies, preparing 
-        him for future work in creative web development. James aims to keep a small digital 
-        footprint, recognising the excessive quantities of content already available online. 
+        in <a target="_blank" rel="noreferrer" href="https://jameshancock.art/labyrinth/">labyr.in/th/</a>, 
+        he’s also created complex 3D scenes in <a target="_blank" rel="noreferrer" href="https://fingerprint.garden">fingerprint.garden</a> and <a target="_blank" rel="noreferrer" href="https://you-are.online">you-are.online</a>. His practice is focused on learning new technologies, preparing 
+        him for future work in creative web development.
         All projects are made on a no-cost basis and are open-sourced for collaborators to 
-        contribute to or steal from.
+        add to or steal from.
         </ArtistProfile>
 
-        <Contact email="jhancock532@gmail.com" instagram="https://www.instagram.com/jhancock532/" twitter="https://twitter.com/jhancock532" />
-        
+        <Contact email="jhancock532@gmail.com" github="https://github.com/jhancock532" instagram="https://www.instagram.com/jhancock532/" twitter="https://twitter.com/jhancock532" />
       </div>
     );
   }

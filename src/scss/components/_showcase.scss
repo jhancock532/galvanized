@@ -118,8 +118,14 @@
 
   &__two-images {
     display: flex;
-    flex-direction: row;
     gap: $grid;
+    flex-direction: column;
+
+    @include media-query(sm){
+    
+    flex-direction: row;
+    
+    }
   }
 
   &__gap {

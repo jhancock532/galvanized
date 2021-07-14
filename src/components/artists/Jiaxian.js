@@ -52,7 +52,7 @@ class Jiaxian extends React.Component {
         
         <h1 className="showcase__author-subtitle">Created By Jiaxian Liang</h1>
         <ArtistProfile src="../img/daniel/daniel.png" alt="Photo of Jiaxian Liang">
-        Liang Jiaxian is a contemporary illustrator and visual designer mainly focusing on slide,
+        Jiaxian Liang is a contemporary illustrator and visual designer mainly focusing on slide,
         UI and graphic design. His recent practice has shifted to interactive fiction and 
         interactive installation. It relates to art transformation via code and explores a 
         consistency between different media with the same content. A kind of natural beauty 
