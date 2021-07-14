@@ -35,7 +35,11 @@ class Jack extends React.Component {
           a world for the player to enjoy.
         </ArtistProfile>
 
-        <Contact email="Jack.myers110@gmail.com" instagram="https://www.instagram.com/mack.jyers/" />
+        <Contact
+         email="Jack.myers110@gmail.com" 
+         instagram="https://www.instagram.com/mack.jyers/"
+         website="https://jackmyers110.wixsite.com/portfolio" 
+         />
       </div>
     );
   }

@@ -34,6 +34,12 @@
     @include font-size(l);
   }
 
+  &__author-subtitle {
+    @include media-query(md){
+      text-align: center;
+    }
+  }
+
   &__video-embed {
     max-width: 640px;
     display: block;

@@ -60,9 +60,9 @@ const ARTIST_DETAILS = [
     image: "../img/puppyuck/artwork.png",
   },
   { 
-    url: "lemayr",
-    name:"Lemayr",
-    image: "../img/jodie/artwork.png",
+    url: "lemayrt",
+    name:"Lemayrt",
+    image: "../img/lemayr/artwork.png",
   }
 ]
 

@@ -5,7 +5,7 @@ import Jack from './artists/Jack';
 import Tim from './artists/Tim';
 import Jodie from './artists/Jodie';
 import Vincent from './artists/Vincent';
-import Lemayr from './artists/Lemayr';
+import Lemayrt from './artists/Lemayrt';
 import Puppyuck from './artists/Puppyuck';
 import Patrick from './artists/Patrick';
 import Omar from './artists/Omar';
@@ -36,7 +36,7 @@ class ArtistShowcase extends React.Component {
     if (this.props.artistSelected === "Ena Koitabashi") artistContent = <Ena />;
     if (this.props.artistSelected === "Jack Myers") artistContent = <Jack />;
     if (this.props.artistSelected === "Jiaxian Liang") artistContent = <Jiaxian />;
-    if (this.props.artistSelected === "Lemayr") artistContent = <Lemayr />;
+    if (this.props.artistSelected === "Lemayrt") artistContent = <Lemayrt />;
     if (this.props.artistSelected === "Puppyuck") artistContent = <Puppyuck />;
     if (this.props.artistSelected === "Chonlachat Srisompetch") artistContent = <Chonlachat />;
 
