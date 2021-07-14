@@ -7,7 +7,7 @@ const ARTIST_DETAILS = [
   { 
     url: "james",
     name:"James Hancock",
-    image: "../img/james/fingerprint.png",
+    image: "../img/james/artwork.png",
   },
   { 
     url: "vincent",
@@ -37,7 +37,7 @@ const ARTIST_DETAILS = [
   { 
     url: "jiaxian",
     name:"Jiaxian Liang",
-    image: "../img/jodie/artwork.png",
+    image: "../img/daniel/artwork.jpg",
   },
   { 
     url: "jack",

@@ -36,9 +36,11 @@ class Vincent extends React.Component {
           development technologies.
         </ArtistProfile>
 
-        
-
-        <Contact email="hello@vincentkeep.com" instagram="https://www.instagram.com/vincentkeep/" />
+        <Contact 
+          email="hello@vincentkeep.com" 
+          instagram="https://www.instagram.com/vincentkeep/"
+          website="vincentkeep.com"
+        />
         
       </div>
     );

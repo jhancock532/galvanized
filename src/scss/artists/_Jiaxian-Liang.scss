@@ -4,7 +4,7 @@
     @include media-query(md){
     top: calc(50%);
     left: calc(50%);
-    transform: translate(-50%, -50%) translate(-20vmin, -25vmin);
+    transform: translate(-50%, -50%) translate(50vmin, 20vmin);
     }
   }
 

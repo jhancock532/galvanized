@@ -4,19 +4,9 @@
     @include media-query(md){
     top: calc(50%);
     left: calc(50%);
-    transform: translate(-50%, -50%) translate(30vmin, 35vmin);
+    transform: translate(-50%, -50%) translate(40vmin, 30vmin);
     }
 
-    //> .collage-photo__image {
-      //clip-path: polygon(0% 100%, 0% 20%, 50% 70%, 50% 0%, 90% 0%, 100% 100%);
-    //}
-    
-  }
-
-  .showcase {
-    &__artwork-title {
-      //background-color: yellow;
-    }
   }
 
 }

@@ -35,13 +35,11 @@ class Jiaxian extends React.Component {
         </p>
 
         <p className="showcase__paragraph">
-        This project is open source. If you want to play this installation, here is the download link.
-
-        You also need to download TouchDesigner to run this work. Here is the official website of TouchDesigner:
-        <a rel="noreferrer" target="_blank" href="https://derivative.ca/download">https://derivative.ca/download</a>. 
-        If you cannot access the file, an online show is as follows:  
-         <a rel="noreferrer" target="_blank" href="https://www.twitch.tv/mach1nerose">https://www.twitch.tv/mach1nerose</a>
-        
+        <ul className="showcase__list">
+          <li>This project is open source. If you want to play this installation, here is <a rel="noreferrer" target="_blank" href="../TheWorldOfGo.zip">the download link</a>.</li>
+          <li>You also need to <a rel="noreferrer" target="_blank" href="https://derivative.ca/download">download TouchDesigner</a> to run this work.</li>
+          <li>If you cannot access the file, you can watch a livestream <a rel="noreferrer" target="_blank" href="https://www.twitch.tv/mach1nerose">on Twitch</a>.</li>
+        </ul>
         </p>
         
         <div className="showcase__two-images">
@@ -61,10 +59,9 @@ class Jiaxian extends React.Component {
         that people can immerse into the work and feel relax is what he attempts to achieve.
          However, all his works are driven by his meaningless flash of inspirations and 
          imagination, and thus and more importantly, are for fun. 
-         <a href="machinerose.com">www.machinerose.com</a>
         </ArtistProfile>
 
-        <Contact email="mecok3263@outlook.com"/>
+        <Contact email="mecok3263@outlook.com" website="www.machinerose.com"/>
 
       </div>
     );
