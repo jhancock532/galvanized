@@ -5,7 +5,7 @@ class ShowInformation extends React.Component {
     return (
       <div className="show-information">
         <div className="show-information__title">
-          <img className="show-information__logo" src="./img/logo.png" alt="Galvanised logo"/>
+          <img className="show-information__logo" src="../img/galvanised-logo.png" alt="Galvanised logo"/>
         </div>
         <div className="show-information__description">
           <p>Digital Media Arts 2021</p>
