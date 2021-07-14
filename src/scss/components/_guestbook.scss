@@ -46,4 +46,15 @@
       display: block;
     }
   }
+
+  &__sketchpad-disclaimer {
+    @include font-size(m);
+    text-align: center;
+    color: #444;
+    width: 200px;
+    margin: 0;
+    @include media-query(md) {
+      display: none;
+    }
+  }
 }

@@ -81,8 +81,10 @@ class Guestbook extends React.Component {
         </div>
         { this.state.isOpen ? 
           <div className="guestbook__options">
+            <p className="guestbook__sketchpad-disclaimer">View this website on a desktop device to leave a drawing.</p>
             <button className="button guestbook__sketchpad-button" onClick={this.openSketchpad}>Leave a drawing</button>
             <button className="button" onClick={this.openCommentForm}>Leave a comment</button>
+            
             <div className="guestbook__view-submissions-button button--subtle" onClick={this.openSubmissionsGallery}>View guestbook <br></br>submissions</div>
           </div> 
           : null

@@ -1,11 +1,22 @@
 .contact {
   text-align: center;
 
+  margin-bottom: $grid * 3;
+
+  @include media-query(md){
+    margin-bottom: 0;
+  }
+
   &__cta {
     background: black;
     color: white;
     width: max-content;
-    margin: $grid * 4 auto $grid;
+    margin: $grid * 2 auto $grid;
+
+    @include media-query(md){
+      margin: $grid * 4 auto $grid;
+    }
+    
     display: block;
     padding: $grid / 2 $grid;
   }
