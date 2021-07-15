@@ -11,7 +11,7 @@ class CommentForm extends React.Component {
   submitComment() {
     const xhr = new XMLHttpRequest();
 
-    xhr.open("POST", "//135.125.205.105/mashow/save_comment.php", true);
+    xhr.open("POST", "https://gearynet.co.uk/mashow/save_comment.php", true);
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
       if (this.readyState !== 4) {

@@ -53,7 +53,7 @@ class Sketchpad extends React.Component {
       return;
     }
 
-    xhr.open("POST", "//135.125.205.105/mashow/save_doodle.php", true);
+    xhr.open("POST", "https://gearynet.co.uk/mashow/save_doodle.php", true);
     xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
       if (this.readyState !== 4) {
