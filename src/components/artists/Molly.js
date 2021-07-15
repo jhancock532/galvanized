@@ -31,7 +31,7 @@ class Molly extends React.Component {
 
 
         <h1 className="showcase__author-subtitle">Created By Molly Stanners Putland</h1>
-        <ArtistProfile src="../img/logos.png" alt="Patrick Robinson">
+        <ArtistProfile src="../img/molly/molly.png" alt="Molly Stanners Putland">
         Molly Stanners Putland is a filmmaker, musician, photographer and illustrator. After 
         completing the BA in illustration also at the university of Brighton, Molly decided 
         to embark on the master’s in digital artand Media. Molly is known for her imaginative 
