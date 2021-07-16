@@ -15,6 +15,11 @@ const ARTIST_DETAILS = [
     image: "../img/vincent/artwork.png",
   },
   { 
+    url: "molly",
+    name:"Molly Stanners Putland",
+    image: "../img/molly/artwork.png",
+  },
+  { 
     url: "chonlachat",
     name:"Chonlachat Srisompetch",
     image: "../img/paul/artwork.jpeg",
@@ -48,11 +53,6 @@ const ARTIST_DETAILS = [
     url: "omar",
     name:"Omar Hamouda",
     image: "../img/omar/artwork.png",
-  },
-  { 
-    url: "molly",
-    name:"Molly Stanners Putland",
-    image: "../img/molly/artwork.png",
   },
   { 
     url: "puppyuck",
