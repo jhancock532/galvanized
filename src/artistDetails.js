@@ -1,8 +1,8 @@
 const ARTIST_DETAILS = [
   { 
-    url: "jodie",
-    name: "Jodie Hartland", 
-    image: "../img/jodie/artwork.png",
+    url: "omar",
+    name:"Omar Hamouda",
+    image: "../img/omar/artwork.png",
   },
   { 
     url: "james",
@@ -50,9 +50,9 @@ const ARTIST_DETAILS = [
     image: "../img/jack/artwork.png",
   },
   { 
-    url: "omar",
-    name:"Omar Hamouda",
-    image: "../img/omar/artwork.png",
+    url: "jodie",
+    name: "Jodie Hartland", 
+    image: "../img/jodie/artwork.png",
   },
   { 
     url: "puppyuck",
