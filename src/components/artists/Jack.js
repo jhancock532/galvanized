@@ -13,7 +13,7 @@ class Jack extends React.Component {
 
         <p className="showcase__paragraph">
         “The Snow Storm” is an interactive, Swiss themed, murder mystery game experience. 
-        The game is set in a castle in a mountainous regionin the Alps in a period between the
+        The game is set in a castle in a mountainous region in the Alps in a period between the
         1930’s and 1950’s. The narrative combines complete wackiness with Swiss folklore and 
         extraterrestrial sightings around the area which it is based.
         
@@ -21,7 +21,11 @@ class Jack extends React.Component {
         </p>
 
         <div className="showcase__center-button">
-          <a target="_blank" rel="noreferrer" href="https://www.mediafire.com/file/sd64elxcjrde81k/The_Snow_Storm.rar/file" className="button">Game Download Link</a>
+          <a target="_blank" rel="noreferrer" href="https://www.mediafire.com/file/sd64elxcjrde81k/The_Snow_Storm.rar/file" className="button">Game Download Link (Windows)</a>
+        </div>
+
+        <div className="showcase__center-button">
+          <a target="_blank" rel="noreferrer" href="https://www.mediafire.com/file/nrfnvj5003kmnpv/The_Snow_Storm_Mac.app.rar/file" className="button">Game Download Link (Mac)</a>
         </div>
 
         <VideoEmbed url="https://www.youtube.com/watch?v=PmqcCWjOpuI" subtitle="Game Playthrough"/>

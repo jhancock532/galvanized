@@ -41,5 +41,23 @@
 
   &__logo {
     width: 100px;
+    margin-bottom: $grid;
+
+    @include media-query(md){
+      margin-bottom: $grid* 2;
+    }
+    
+  }
+
+  &__subtitle {
+    margin-top: $grid * 2;
+    @include font-size(xxl);
+  }
+
+  &__list {
+    list-style: square;
+    > li {
+      padding-bottom: $grid / 2;
+    }
   }
 }
