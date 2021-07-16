@@ -124,6 +124,9 @@
     @include media-query(sm){
     
     flex-direction: row;
+    > img {
+      width: 50%;
+    }
     
     }
   }

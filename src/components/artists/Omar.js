@@ -1,6 +1,6 @@
 import React from 'react';
 import VideoEmbed from '../showcase/VideoEmbed';
-import ArtistProfile from '../showcase/ArtistProfile';
+//import ArtistProfile from '../showcase/ArtistProfile';
 import Contact from '../showcase/Contact';
 
 class Omar extends React.Component {
