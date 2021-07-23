@@ -40,7 +40,7 @@ class Patrick extends React.Component {
         and the audience.
         </ArtistProfile>
 
-        <Contact instagram="https://www.instagram.com/murrma___/" />
+        <Contact instagram="https://www.instagram.com/murrma___/" website="https://murr-ma.space" />
         
       </div>
     );
