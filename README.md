@@ -1,6 +1,6 @@
 # galvanised.show
 
-A website made to showcase the final pieces of the Digital Media Arts MA 2021 cohort, based in the University of Brighton. This repo was developed by James Hancock, with the backend database and API functions provided by Tim McCarthy.
+A gallery website for the University of Brighton's Digital Media Arts MA 2021 cohort. The backend database and API functions for the website were provided by Tim McCarthy.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
