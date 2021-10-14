@@ -1,20 +1,20 @@
 import React from 'react';
 import VideoEmbed from './showcase/VideoEmbed';
 
-class InformationPage extends React.Component {
+class AboutPage extends React.Component {
 
   render() {
 
     return (
-      <div className="information-page">
+      <div className="about-page">
         <div className="artist-showcase__exit-button">
           <div className="button" onClick={this.props.toggleShowInformation}>Return to Homepage ✖</div>
         </div>
-        <div className="information-page__content">
-          <h1 className="information-page__title">About Galvanised</h1>
-          <img className="information-page__logo" src="../img/logos.png" alt="Galvanized logo"/>
+        <div className="about-page__content">
+          <h1 className="about-page__title">About Galvanised</h1>
+          <img className="about-page__logo" src="../img/logos.png" alt="Galvanized logo"/>
           <VideoEmbed url="https://www.youtube.com/watch?v=xqksblQJ9dw" subtitle="Showreel"/>
-          <p className="information-page__paragraph">
+          <p className="about-page__paragraph">
           Galvanised is an online exhibition displaying the work of 13 digital media artists completing their degrees at the University of Brighton.
           <br/><br/>
           The artists each come from different artistic and academic background, specialising in a variety of skills. 
@@ -29,9 +29,9 @@ class InformationPage extends React.Component {
           immersive and interactive pieces.
           </p>
           
-          <h2 className="information-page__subtitle">Credits</h2>
-          <p className="information-page__paragraph">
-            <ul className="information-page__list">
+          <h2 className="about-page__subtitle">Credits</h2>
+          <p className="about-page__paragraph">
+            <ul className="about-page__list">
               <li>This website was made by <a href="/james">James Hancock</a> (frontend development) and <a href="/tim">Tim McCarthy</a> (backend development).</li>
               <li>Artist profile pictures were produced by <a href="/jodie">Jodie Hartland</a>.</li> 
               <li><a href="/jack">Jack Myers</a> edited the showreel with <a href="/omar">Omar Hamouda</a> providing music.</li> 
@@ -43,9 +43,9 @@ class InformationPage extends React.Component {
             </ul>
           </p>
 
-          <h2 className="information-page__subtitle">Special Thanks</h2>
-          <p className="information-page__paragraph">
-            <ul className="information-page__list">
+          <h2 className="about-page__subtitle">Special Thanks</h2>
+          <p className="about-page__paragraph">
+            <ul className="about-page__list">
               <li>A <span style={{fontSize: "32px", fontWeight: "bold"}}>huge thanks</span> to Sue Gollifer for leading this course!</li>
               <li>A <span style={{letterSpacing: "4px", fontWeight: "bold"}}>long thank you</span> to all of our tutors; Alex May, 
               Angie Taylor, Ben Sheehan, Jesse Black Mooney, Laurence Hill, Luciana Haill, Paul Bunkham and Sam Proud;  
@@ -61,4 +61,4 @@ class InformationPage extends React.Component {
   }
 }
 
-export default InformationPage;
+export default AboutPage;

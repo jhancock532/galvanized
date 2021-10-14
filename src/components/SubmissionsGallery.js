@@ -54,6 +54,7 @@ class SubmissionsGallery extends React.Component {
     let feed = null;
 
     let selectedArtist = "Everyone";
+    
     if (this.state.selectedArtist !== null){
       selectedArtist = this.state.selectedArtist;
     }

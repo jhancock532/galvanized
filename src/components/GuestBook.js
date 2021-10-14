@@ -14,14 +14,9 @@ class Guestbook extends React.Component {
     };
 
     this.toggleGuestbookDisplay = this.toggleGuestbookDisplay.bind(this);
-
-    //Replace these with a simple toggle function?
-    this.openSketchpad = this.openSketchpad.bind(this);
-    this.closeSketchpad = this.closeSketchpad.bind(this);
-    this.openCommentForm = this.openCommentForm.bind(this);
-    this.closeCommentForm = this.closeCommentForm.bind(this);
-    this.openSubmissionsGallery = this.openSubmissionsGallery.bind(this);
-    this.closeSubmissionsGallery = this.closeSubmissionsGallery.bind(this);
+    this.toggleSketchpadDisplay = this.toggleSketchpadDisplay.bind(this);
+    this.toggleCommentFormDisplay = this.toggleCommentFormDisplay.bind(this);
+    this.toggleSubmissionsGalleryDisplay = this.toggleSubmissionsGalleryDisplay.bind(this);
   }
 
   toggleGuestbookDisplay(){
@@ -30,46 +25,25 @@ class Guestbook extends React.Component {
     }))
   }
 
-  openSketchpad(){
-    this.setState({
-      sketchpadOpen: true,
-    })
-    this.props.setNoScroll(true);
+  toggleSketchpadDisplay(){
+    this.props.setNoScroll(!this.state.sketchpadOpen);
+    this.setState(state => ({
+      sketchpadOpen: !state.sketchpadOpen
+    }))
   }
 
-  closeSketchpad(){
-    this.setState({
-      sketchpadOpen: false,
-    })
-    this.props.setNoScroll(false);
+  toggleCommentFormDisplay(){
+    this.props.setNoScroll(!this.state.commentFormOpen);
+    this.setState(state => ({
+      commentFormOpen: !state.commentFormOpen
+    }))
   }
 
-  openSubmissionsGallery(){
-    this.setState({
-      submissionsGalleryOpen: true,
-    })
-    this.props.setNoScroll(true);
-  }
-
-  closeSubmissionsGallery(){
-    this.setState({
-      submissionsGalleryOpen: false,
-    })
-    this.props.setNoScroll(false);
-  }
-
-  openCommentForm(){
-    this.setState({
-      commentFormOpen: true,
-    })
-    this.props.setNoScroll(true);
-  }
-
-  closeCommentForm(){
-    this.setState({
-      commentFormOpen: false,
-    })
-    this.props.setNoScroll(false);
+  toggleSubmissionsGalleryDisplay(){
+    this.props.setNoScroll(!this.state.submissionsGalleryOpen);
+    this.setState(state => ({
+      submissionsGalleryOpen: !state.submissionsGalleryOpen
+    }))
   }
 
   render() {
@@ -82,24 +56,27 @@ class Guestbook extends React.Component {
         { this.state.isOpen ? 
           <div className="guestbook__options">
             <p className="guestbook__sketchpad-disclaimer">View this website on a desktop device to leave a drawing.</p>
-            <button className="button guestbook__sketchpad-button" onClick={this.openSketchpad}>Leave a drawing</button>
-            <button className="button" onClick={this.openCommentForm}>Leave a comment</button>
+            <button className="button guestbook__sketchpad-button" onClick={this.toggleSketchpadDisplay}>Leave a drawing</button>
+            <button className="button" onClick={this.toggleCommentFormDisplay}>Leave a comment</button>
             
-            <div className="guestbook__view-submissions-button button--subtle" onClick={this.openSubmissionsGallery}>View guestbook <br></br>submissions</div>
+            <div className="guestbook__view-submissions-button button--subtle" onClick={this.toggleSubmissionsGalleryDisplay}>View guestbook <br></br>submissions</div>
           </div> 
           : null
         }
       </div>
+
       { this.state.sketchpadOpen ?
-        <Sketchpad closeSketchpad={this.closeSketchpad} artistSelected={this.props.artistSelected} />
+        <Sketchpad closeSketchpad={this.toggleSketchpadDisplay} artistSelected={this.props.artistSelected} />
         : null
       }
+
       { this.state.commentFormOpen ?
-        <CommentForm closeCommentForm={this.closeCommentForm} artistSelected={this.props.artistSelected} />
+        <CommentForm closeCommentForm={this.toggleCommentFormDisplay} artistSelected={this.props.artistSelected} />
         : null
       }
+      
       { this.state.submissionsGalleryOpen ?
-        <SubmissionsGallery closeSubmissionsGallery={this.closeSubmissionsGallery} artistSelected={this.props.artistSelected} />
+        <SubmissionsGallery closeSubmissionsGallery={this.toggleSubmissionsGalleryDisplay} artistSelected={this.props.artistSelected} />
         : null
       }
       </>

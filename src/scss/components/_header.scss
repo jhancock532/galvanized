@@ -1,4 +1,4 @@
-.show-information {
+.header {
 
   @include media-query(md){
     position: absolute;
@@ -23,9 +23,6 @@
     @include media-query(md){
       width: 530px;
     }
-    //padding: $grid / 2;
-    //background: white;
-    //border: 2px solid black;
   }
 
   &__title {
@@ -48,7 +45,6 @@
     > p {
       margin: 4px 0;
     }
-    
 
     @include media-query(md){
       margin: 0 0 0 auto;
@@ -57,7 +53,6 @@
       padding: $grid 0 $grid $grid;
       
       background: white;
-      //border: 2px solid black;
       text-align: center;
       pointer-events: initial;
 

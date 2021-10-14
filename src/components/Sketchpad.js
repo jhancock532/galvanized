@@ -4,6 +4,7 @@ import ARTIST_DETAILS from '../artistDetails';
 import { ColorPicker, toColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
 
+//Using the Color Palette provided by
 //https://github.com/Wondermarin/react-color-palette
 
 class Sketchpad extends React.Component {
@@ -42,9 +43,6 @@ class Sketchpad extends React.Component {
   }
 
   submitSketch(){
-    //const ctx = this.canvasRef.current.getContext("2d");
-    //const data = ctx.getImageData(0,0, 640, 480);
-
     const xhr = new XMLHttpRequest();
 
     const name = prompt("Please enter your name. (Optional)");
@@ -72,7 +70,6 @@ class Sketchpad extends React.Component {
     ].join("&");
 
     xhr.send(POST_DATA);
-    console.log(POST_DATA);
 
     this.props.closeSketchpad();
   }
@@ -135,11 +132,3 @@ class Sketchpad extends React.Component {
 }
 
 export default Sketchpad;
-
-/*
-      <form className="sketchpad__submission-form" name="sketchpad-form" action="http://135.125.205.105/mashow/save_doodle.php" method="POST">
-        <input type="hidden" id="respond_to" name="respond_to" value="James"></input>
-        <input type="hidden" id="image_data" name="image_data"></input>
-        <input type="text" name="name" placeholder="Your name (Optional)" value="JAMES_TESTING"></input>
-      </form>
-*/

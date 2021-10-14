@@ -4,9 +4,7 @@ import ArtistMenuOption from './ArtistMenuOption';
 class ArtistsMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {isMenuOpen: false};
-
-    // This binding is necessary to make `this` work in the callback    
+    this.state = {isMenuOpen: false}; 
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -18,7 +16,6 @@ class ArtistsMenu extends React.Component {
 
   render() {
 
-    //This creates all the artist options in the menu
     const artistMenuOptions = this.props.artistDetails.map((artist) => 
       <ArtistMenuOption 
         key={artist.name} 

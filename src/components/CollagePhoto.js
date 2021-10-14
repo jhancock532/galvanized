@@ -3,8 +3,7 @@ import React from 'react';
 class CollagePhoto extends React.Component {
   constructor(props) {
     super(props);
-
-    // This binding is necessary to make `this` work in the callback    
+  
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -55,10 +54,7 @@ class CollagePhoto extends React.Component {
 
     if (this.props.artistSelected === null) {
       return (
-        <div 
-          className={collagePhotoClassNames}  
-          style={selectionHoverStyling}
-        >
+        <div className={collagePhotoClassNames} style={selectionHoverStyling}>
           <img 
             className="collage-photo__image"
             alt="" 

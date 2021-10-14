@@ -4,7 +4,6 @@ class ArtistOverview extends React.Component {
   constructor(props) {
     super(props);
 
-    // This binding is necessary to make `this` work in the callback    
     this.handleClick = this.handleClick.bind(this);
     this.artistCSS = props.artistDetails[0].name.replace(" ", "-");
   }
@@ -12,11 +11,6 @@ class ArtistOverview extends React.Component {
   handleClick(){
     this.props.setActiveArtist(this.props.artistDetails[0].name);
   }
-
-  //Can the parent element detect hover events for all children, and click events???
-  //  onMouseEnter={() => setIsShown(true)}
-  //  onMouseLeave={() => setIsShown(false)}
-  //  https://upmostly.com/tutorials/react-onhover-event-handling-with-examples
 
   render(){
     return (

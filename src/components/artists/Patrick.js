@@ -18,6 +18,7 @@ class Patrick extends React.Component {
         balance their movement without being able to see each other. The results consider 
         behaviour and interaction with the unknown, directly influenced by the cybernetic 
         machine, the homeostat. </p>
+
         <p className="showcase__paragraph">
         The spectator’s movements are translated into audio and visuals 
         that are projected into the space. On show in this exhibition is a virtual prototype 
@@ -31,6 +32,7 @@ class Patrick extends React.Component {
         <div className="showcase__gap"/>
 
         <h1 className="showcase__author-subtitle">Created By Patrick Robinson</h1>
+        
         <ArtistProfile src="../img/patrick/patrick.png" alt="Patrick Robinson">
         Patrick Robinson is an artist and creative technologist. His work often considers 
         behaviour and is drawn from cybernetics. Patrick enjoys working with real-time software 

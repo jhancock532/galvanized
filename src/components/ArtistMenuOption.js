@@ -3,8 +3,7 @@ import React from 'react';
 class ArtistMenuOption extends React.Component {
   constructor(props) {
     super(props);
-
-    // This binding is necessary to make `this` work in the callback    
+  
     this.handleClick = this.handleClick.bind(this);
     this.handleMouseEnter = this.handleMouseEnter.bind(this);
     this.handleMouseLeave = this.handleMouseLeave.bind(this);

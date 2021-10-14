@@ -1,13 +1,15 @@
 import React from 'react';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import AboutPage from './components/AboutPage';
 import ArtistsMenu from './components/ArtistsMenu';
-import ShowInformation from './components/ShowInformation';
+import ArtistShowcase from './components/ArtistShowcase';
 import Guestbook from './components/GuestBook';
 import Collage from './components/Collage';
-import './scss/main.scss';
-import ARTIST_DETAILS from './artistDetails';
-import ArtistShowcase from './components/ArtistShowcase';
-import InformationPage from './components/InformationPage';
-import Footer from './components/Footer';
+
+import ARTIST_DETAILS from './artistDetails'; //JSON data
+import './scss/main.scss'; //All components styled from the /scss folder
 
 class App extends React.Component {
   constructor(props) {
@@ -18,7 +20,7 @@ class App extends React.Component {
       artistSelected: null,
       hoveredArtist: null,
       noScroll: false,
-      showInformation: false,
+      showAboutPage: false,
     };
 
     this.setActiveArtist = this.setActiveArtist.bind(this);
@@ -26,7 +28,7 @@ class App extends React.Component {
     this.resetHoveredArtist = this.resetHoveredArtist.bind(this);
     this.removeActiveArtist = this.removeActiveArtist.bind(this);
     this.setNoScroll = this.setNoScroll.bind(this);
-    this.toggleShowInformation = this.toggleShowInformation.bind(this);
+    this.toggleAboutPage = this.toggleAboutPage.bind(this);
   }
 
   setActiveArtist(artist) {
@@ -44,11 +46,6 @@ class App extends React.Component {
 
   removeActiveArtist() {
     window.location.pathname = "/";
-    //this.setState({
-    //  isArtistSelected: false,
-    //  artistSelected: null
-    //})
-    
   }
 
   setHoveredArtist(artist) {
@@ -69,23 +66,25 @@ class App extends React.Component {
     })
   }
 
-  toggleShowInformation(){
+  toggleAboutPage(){
     this.setState(state => ({
-      showInformation: !state.showInformation,
-      noScroll: !state.showInformation
+      showAboutPage: !state.showAboutPage,
+      noScroll: !state.showAboutPage
     }));
   }
 
   componentDidMount() {
     if (window.location.pathname !== "/"){
-      if (window.location.pathname === "/zoom"){
-        window.location.href="https://zoom.us/j/9646433419";
-      }
+
+      //For the final show live view & presentations.
+      //if (window.location.pathname === "/zoom"){
+      //  window.location.href="https://zoom.us/j/9646433419";
+      //}
 
       if (window.location.pathname === "/about"){
         this.setState(state => ({
-          showInformation: !state.showInformation,
-          noScroll: !state.showInformation
+          showAboutPage: !state.showAboutPage,
+          noScroll: !state.showAboutPage
         }));
       }
 
@@ -119,14 +118,13 @@ class App extends React.Component {
       document.body.style.overflowY = "initial";
     }
 
-
-
     return (
       <div className="App">
 
-        <ShowInformation toggleShowInformation={this.toggleShowInformation}/>
-        { this.state.showInformation ? 
-        <InformationPage toggleShowInformation={this.toggleShowInformation}/>
+        <Header toggleAboutPage={this.toggleAboutPage}/>
+
+        { this.state.showAboutPage ? 
+        <AboutPage toggleAboutPage={this.toggleAboutPage}/>
         : null }
 
         <ArtistsMenu 
@@ -146,13 +144,16 @@ class App extends React.Component {
           artistSelected={this.state.artistSelected}
         />
 
-
-
         <ArtistShowcase 
           artistSelected={this.state.artistSelected} 
           removeActiveArtist={this.removeActiveArtist}
         />
-        <Guestbook artistSelected={this.state.artistSelected} setNoScroll={this.setNoScroll}/>
+
+        <Guestbook 
+          artistSelected={this.state.artistSelected} 
+          setNoScroll={this.setNoScroll}
+        />
+
         <Footer />
       </div>
     );
