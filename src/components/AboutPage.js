@@ -8,7 +8,7 @@ class AboutPage extends React.Component {
     return (
       <div className="about-page">
         <div className="artist-showcase__exit-button">
-          <div className="button" onClick={this.props.toggleShowInformation}>Return to Homepage ✖</div>
+          <div className="button" onClick={this.props.toggleAboutPage}>Return to Homepage ✖</div>
         </div>
         <div className="about-page__content">
           <h1 className="about-page__title">About Galvanised</h1>

@@ -11,7 +11,7 @@ class Header extends React.Component {
           <p>Digital Media Arts 2021</p>
           <p>Master's Degree Exhibition</p>
           <p>University of Brighton</p>
-          <button onClick={this.props.toggleShowInformation} className="button button--small header__button">Exhibition Information</button>
+          <button onClick={this.props.toggleAboutPage} className="button button--small header__button">Exhibition Information</button>
         </div>
       </div>
     );
