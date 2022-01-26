@@ -29,11 +29,6 @@ const ARTIST_DETAILS = [
     name:"Tim McCarthy",
     image: "../img/tim/artwork.png",
   },
-  /*{ 
-    url: "ena",
-    name:"Ena Koitabashi",
-    image: "../img/jodie/artwork.png",
-  },*/
   { 
     url: "patrick",
     name:"Patrick Robinson",
@@ -53,11 +48,6 @@ const ARTIST_DETAILS = [
     url: "jodie",
     name: "Jodie Hartland", 
     image: "../img/jodie/artwork.png",
-  },
-  { 
-    url: "puppyuck",
-    name:"Puppyuck",
-    image: "../img/puppyuck/artwork.png",
   },
   { 
     url: "lemayrt",
