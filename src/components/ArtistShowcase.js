@@ -6,12 +6,10 @@ import Tim from './artists/Tim';
 import Jodie from './artists/Jodie';
 import Vincent from './artists/Vincent';
 import Lemayrt from './artists/Lemayrt';
-import Puppyuck from './artists/Puppyuck';
 import Patrick from './artists/Patrick';
 import Omar from './artists/Omar';
 import Molly from './artists/Molly';
 import Jiaxian from './artists/Jiaxian';
-import Ena from './artists/Ena';
 import Chonlachat from './artists/Chonlachat';
 
 class ArtistShowcase extends React.Component {
@@ -33,11 +31,9 @@ class ArtistShowcase extends React.Component {
     if (this.props.artistSelected === "Molly Stanners Putland") artistContent = <Molly />;
     if (this.props.artistSelected === "Vincent Keep") artistContent = <Vincent />;
     if (this.props.artistSelected === "Tim McCarthy") artistContent = <Tim />;
-    if (this.props.artistSelected === "Ena Koitabashi") artistContent = <Ena />;
     if (this.props.artistSelected === "Jack Myers") artistContent = <Jack />;
     if (this.props.artistSelected === "Jiaxian Liang") artistContent = <Jiaxian />;
     if (this.props.artistSelected === "Lemayrt") artistContent = <Lemayrt />;
-    if (this.props.artistSelected === "Puppyuck") artistContent = <Puppyuck />;
     if (this.props.artistSelected === "Chonlachat Srisompetch") artistContent = <Chonlachat />;
 
     return (
